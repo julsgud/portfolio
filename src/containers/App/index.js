@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
 
 import Home from 'containers/Home';
+import Work from 'containers/Work';
 import Header from 'components/Header';
 
 const Container = styled.div`
@@ -19,11 +20,22 @@ const Container = styled.div`
 `;
 
 export default class App extends React.Component {
+	constructor() {
+		super();
+
+		this.state = {
+			lang: 'ES'
+		}
+	}
+
 	render() {
 		return(
 			<Container>
 				<Header/>
 				<Route exact path="/" component={Home}/>
+				<Route exact path="/work" render={() =>
+					<Work lang={this.state.lang}/>
+				}/>
 			</Container>
 		);
 	}

@@ -1,0 +1,66 @@
+{
+	"projects": [
+		{
+			"title": "Plasticsrev.club",
+			"description": "Web app for music project release",
+			"tools": "React, Facebook API, Cloudinary, Kairos Facial Recognition API",
+			"technical twist": "Get user images from FB, analyze for facial recognition, create artwork using images and FR info. Save images and share to FB."
+		},
+		{
+			"title": "I Can Chase Dragons 'Fauna' Release",
+			"description": "Puzzle/Sequencer that reveals single + remixes upon completion",
+			"tools": "p5js, Youtube API",
+			"technical twist": "Clean and simple UI that requires no textual instructions. Game that represents disorder, chaos as the main concept of the album."
+		},
+		{
+			"title": "Lyric Video for 'Ciclos' by I Can Chase Dragons",
+			"description": "Created with Pamela Hersch (Video and Editing)",
+			"tools": "Processing",
+			"technical twist": "Convey concept of entropy through font and video footage processing. Use live videos of dancer/singer through custom filters to create interaction with a digital, dreamy aesthetic."
+		},
+		{
+			"title": "Texture Modular",
+			"description": "Semi-modular performance system that maps user-loaded images as textures on 3D geometry to create visuals for an ableton live set.",
+			"tools": "Max for Live, Max/MSP/Jitter, OSC",
+			"technical twist": "Building modules (LFOs, Envelopes, etc) from scratch. Control visual system from Ableton Live using OSC protocol and original Max for Live devices."
+		},
+		{
+			"title": "Promo Video Set for 'Entropía' by I Can Chase Dragons",
+			"description": "Created with Julio Derbez (Graphic Design)",
+			"tools": "Processing, Final Cut X",
+			"technical twist": "Digital content creation out of static designs to preview each single off the album"
+		}
+	],
+	"proyectos": [
+		{
+			"título": "Plasticsrev.club",
+			"descripción": "Aplicación web de promoción de lanzamiento de música",
+			"herramientas": "React, Facebook API, Cloudinary, Kairos Detección Facial API",
+			"reto técnico": "Extraer imágenes de perfil de FB, analizar para detección de caras, crear arte con imágenes e información sobre caras. Salvar imágenes y compartir en FB."
+		},
+		{
+			"título": "Lanzamiento de 'Fauna' de I Can Chase Dragons",
+			"descripción": "Rompezabezas/Secuenciador que revela el sencillo + remixes al completarse",
+			"herramientas": "P5JS, Youtube API",
+			"reto técnico": "Interfaz limpia y sencilla que no requiere instrucciones textuales. Concepto de juego que ejemplifica el orden/desorden como tema del álbum."
+		},
+		{
+			"título": "Lyric video para 'Ciclos' de I Can Chase Dragons",
+			"descripción": "Creado con Pamela Hersch (Cámara y Edición)",
+			"herramientas": "Processing",
+			"reto técnico": "Representar concepto de entropía a través de la tipografía y la estética del video procesado. Transformar videos de bailarina/cantante con filtros y código original de Processing para crear una interacción entre el personaje y un espacio digital."
+		},
+		{
+			"título": "Texturas Modulares",
+			"descripción": "Sistema de ejecución en vivo que aplica imágenes cargadas por el usuario a figuras geométricas para crear visuales para un set de Ableton Live",
+			"herramientas": "Max for Live, Max/MSP/Jitter, OSC",
+			"reto técnico": "Construir modulos (LFO, Envelopes) desde el comienzo. Controlar el sistema visual desde Ableton Live usando OSC y objetos de Max For Live originales."
+		},
+		{
+			"título": "Set de Videos Promocionales para Entropía de ICCD",
+			"descripción": "Creado con Julio Derbez (Diseño Gráfico)",
+			"herramientas": "Processing, Final Cut X",
+			"reto técnico": "Creación de contenido digital a partir de diseños estáticos para cada sencillo del álbum"
+		}
+	]
+}
