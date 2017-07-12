@@ -3,20 +3,25 @@ import {Route} from 'react-router-dom';
 import styled from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
 
-import Home from 'containers/Home';
+import About from 'containers/About';
 import Work from 'containers/Work';
+import Contact from 'containers/Contact';
 import Header from 'components/Header';
+import Sidebar from 'components/Sidebar';
 
 const Container = styled.div`
 	width: 100%;
 	height: 100%;
-	background: #fff;
+	max-width: 920px;
+	background: #fdfdfd;
 	z-index: 0;
 	display: flex;
-	flex-direction: column;
-
+	flex-direction: row;
+	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
-	/*font-family: 'Andika', sans-serif;*/
+	margin: 0 auto;
+	padding: 0;
+	/*font-family: 'Lato', sans-serif;*/
 `;
 
 export default class App extends React.Component {
@@ -31,11 +36,15 @@ export default class App extends React.Component {
 	render() {
 		return(
 			<Container>
-				<Header/>
-				<Route exact path="/" component={Home}/>
-				<Route exact path="/work" render={() =>
-					<Work lang={this.state.lang}/>
-				}/>
+				<Col xs={4}>
+					<Sidebar/>
+				</Col>
+				<Col xs={8}>
+					<Route exact path="/" component={About}/>
+					<Route exact path="/work" render={() =>
+						<Work lang={this.state.lang}/>
+					}/>
+				</Col>
 			</Container>
 		);
 	}

@@ -15,7 +15,7 @@ export default class Home extends React.Component {
 	render() {
 		return(
 			<Row center="xs">
-				<Img src="https://res.cloudinary.com/julsgc/image/upload/v1493303029/ICCD_B-52_b2bzpt.jpg"/>
+				
 			</Row>
 		);
 	}

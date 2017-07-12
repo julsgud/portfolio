@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import update from 'immutability-helper';
 
 import json from './projects.json';
+import Project from 'components/Project'
 
 const Img = styled.img`
 	width: 100%;
@@ -35,15 +36,24 @@ export default class Work extends React.Component {
 	render() {
 		let projects = [];
 
-		if (this.state.projects) {
-			this.state.projects.forEach((p) => {
+		// if (this.state.projects) {
+		// 	this.state.projects.forEach((p) => {
 				
-			});
-		} 
+		// 	});
+		// } 
+		let props = {
+			mediaType: 'image',
+			mediaSrc: 'http://via.placeholder.com/350x150',
+			titleLink: '',
+			title: 'title',
+			subtitle: 'subtitle',
+			description: 'description'
+		}
 
 		return(
 			<Row center="xs">
-				<h1> Work </h1>
+				{/*<h1> Work </h1>*/}
+				<Project {...props}/>
 			</Row>
 		);
 	}
