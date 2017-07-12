@@ -2,15 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
 
+const Container = styled(Col)`
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	max-width: 400px;
+	border-style: solid;
+	border-width: 0px;
+/*	-webkit-box-shadow: 0px 11px 30px -8px rgba(29,29,29,1);
+	moz-box-shadow: 0px 11px 30px -8px rgba(29,29,29,1);
+	box-shadow: 0px 11px 30px -8px rgba(29,29,29,1);*/
+`;
+
 const CardContainer = ({children}) => {
 	return (
-		<Row>
+		<Container>
 			{children}
-		</Row>
+		</Container>
 	);
 }
 
 const Img = styled.img`
+	margin: 0;
+	margin-top: 22px;
 	width: 100%;
 `;
 
@@ -24,35 +38,58 @@ const CardMedia = (props) => {
 		);
 	} else {
 		return(
-			<Col xs={12}>
-				<Img src={props.src}></Img>
-			</Col>
+			<Img src={props.src}></Img>
 		);
 	}
 }
 
+const CardTextContainer = styled(Col)`
+
+`;
+
+const Title = styled.div`
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: rgba(29, 29, 29,1);
+	font-weight: 400;
+	font-size: 24px;
+`;
+
 const CardTitle = (props) => {
 	return(
-		<Col xsOffset={1} xs={10}>
-			<h3> props.text </h3>
-		</Col>
+		<Title href="https://www.plasticsrev.club"> {props.text} </Title>
 	);
 }
+
+const Subtitle = styled.div`
+	font-weight: 300;
+	font-size: 16px;
+	margin: 0;
+	margin-bottom: 10px;
+`;
 
 const CardSubtitle = (props) => {
 	return(
-		<Col xsOffset={1} xs={10}>
-			<h5> props.text </h5>
-		</Col>
+		<Subtitle> {props.text} </Subtitle>
 	);
 }
 
-const CardDescription = (props) => {
+const Text = styled.div`
+	text-align: justify;
+	font-weight: 300;
+	font-size: 14px;
+	margin: 0;
+`;
+
+const CardPrimaryText = (props) => {
 	return(
-		<Col xsOffset={1} xs={10}>
-			<p> props.text </p>
-		</Col>
+		<Text> <b>Tools:</b> {props.text} </Text>
+	);
+}
+const CardSecondaryText = (props) => {
+	return(
+		<Text> <b>Twist:</b> {props.text} </Text>
 	);
 }
 
-export {CardContainer, CardMedia, CardTitle, CardSubtitle, CardDescription};
+export {CardContainer, CardMedia, CardTextContainer, CardTitle, CardSubtitle, CardPrimaryText, CardSecondaryText};

@@ -99,7 +99,7 @@ const Divider = styled.h1`
 
 const NavBar = styled(Row)`
 	margin-top: 25px;
-	margin-left: 10px;
+	margin-left: 15px;
 `;
 
 
@@ -122,7 +122,7 @@ export default class Sidebar extends React.Component {
 					</Row>
 				</ImageTitleContainer>
 				<NavBar>
-					<PillLink to="/work"> About </PillLink>
+					<PillLink to="/"> About </PillLink>
 					<Divider> | </Divider>
 					<PillLink to="/work"> Work </PillLink>
 					<Divider> | </Divider>
