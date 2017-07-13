@@ -87,6 +87,10 @@ const PillLink = styled(Link)`
 	&:hover {
 		color: rgba(122, 220, 220, 1);
 	};
+	&:active {
+		text-decoration: underline;
+		color: rgba(251, 74, 35, 1);
+	};
 `;
 
 const Divider = styled.h1`
@@ -102,6 +106,10 @@ const NavBar = styled(Row)`
 	margin-left: 15px;
 `;
 
+const activeLinkStyle = {
+	textDecoration: "underline",
+	color: "#fb4a23"
+};
 
 export default class Sidebar extends React.Component {
 	render() {
