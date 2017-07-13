@@ -7,7 +7,7 @@ const Project = (props) => {
 	return(
 		<CardContainer>
 			<CardTitle linkTo={props.titleLink} text={props.title}/>
-			<CardMedia type={props.mediaType} src={props.mediaSrc}/>
+			<CardMedia type={props.mediaType} src={props.mediaSrc} link={props.link}/>
 			<CardTextContainer>
 				<CardSubtitle text={props.description}/>
 				<CardPrimaryText text={props.tools}/>

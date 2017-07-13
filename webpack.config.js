@@ -15,7 +15,7 @@ module.exports = {
 	module: {
 		loaders: [
 		{test: /\.js$/, loader: ['babel-loader', 'eslint-loader'], exclude: /node_modules/},
-		{test: /\.css$/, loader: 'style-loader!css-loader?modules', include: [/flexboxgrid/, /slick-carousel/]}
+		{test: /\.css$/, loader: 'style-loader!css-loader?modules', include: /flexboxgrid/}
 		]
 	},
 	plugins: [HtmlWebpackPluginConfig],

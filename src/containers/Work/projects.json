@@ -6,7 +6,8 @@
 			"tools": "React, Facebook API, Cloudinary, Kairos Facial Recognition API",
 			"technicalTwist": "Get user images from FB, analyze for facial recognition, create artwork using images and FR info. Save images and share to FB.",
 			"mediaType": "image",
-			"mediaSrc": "http://res.cloudinary.com/julsgc/image/upload/v1494274636/banner_title.png"
+			"mediaSrc": "http://res.cloudinary.com/julsgc/image/upload/v1494274636/banner_title.png",
+			"link": "https://plasticsrev.club"
 		},
 		{
 			"title": "I Can Chase Dragons 'Fauna' Release",

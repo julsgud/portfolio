@@ -38,7 +38,9 @@ const CardMedia = (props) => {
 		);
 	} else {
 		return(
-			<Img src={props.src}></Img>
+			<a target="_blank" href={props.link}>
+				<Img src={props.src}></Img>
+			</a>
 		);
 	}
 }

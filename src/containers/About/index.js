@@ -19,13 +19,15 @@ const Img = styled.img`
 const RedH1 = styled.h1`
 	color: rgba(251, 74, 35, 1);
 	font-weight: 700;
-	font-size: 36px;
+	font-size: 32px;
 	margin-top: 10px;
 	margin-left: 15px;
 	margin-bottom: 10px;
 `;
 
 const Description = styled.p`
+	font-size: 18px;
+	font-weight: 400;
 	letter-spacing: .2px;
 	text-align: justify;
 	margin-bottom: 
@@ -34,6 +36,8 @@ const Description = styled.p`
 `;
 
 const Tag = styled.p`
+	font-size: 18px;
+	font-weight: 400;
 	letter-spacing: .2px;
 	text-align: justify;
 	margin: 0;

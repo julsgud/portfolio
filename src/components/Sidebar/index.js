@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
 import {Row, Col} from 'react-flexbox-grid';
@@ -20,7 +20,7 @@ const ImageTitleContainer = styled(Col)`
 	margin-left: 30px;
 `;
 
-const CircleLink = styled(Link)`
+const CircleLink = styled(NavLink)`
 	width: 200px;
 	height: 200px;
 	margin-top: 45px;
@@ -70,7 +70,7 @@ const BlueH2 = styled.h2`
 	margin-right: 22px;
 `;
 
-const PillLink = styled(Link)`
+const PillLink = styled(NavLink)`
 	/*width: 100px;*/
 	/*height: 100px;*/
 	letter-spacing: .6px;
@@ -108,7 +108,7 @@ const NavBar = styled(Row)`
 
 const activeLinkStyle = {
 	textDecoration: "underline",
-	color: "#fb4a23"
+	color: "#7adcdc"
 };
 
 export default class Sidebar extends React.Component {
@@ -130,11 +130,11 @@ export default class Sidebar extends React.Component {
 					</Row>
 				</ImageTitleContainer>
 				<NavBar>
-					<PillLink to="/"> About </PillLink>
+					<PillLink to="/" exact activeStyle={activeLinkStyle}> About </PillLink>
 					<Divider> | </Divider>
-					<PillLink to="/work"> Work </PillLink>
+					<PillLink to="/work" activeStyle={activeLinkStyle}> Work </PillLink>
 					<Divider> | </Divider>
-					<PillLink to="/about"> Contact </PillLink>
+					<PillLink to="/about" activeStyle={activeLinkStyle}> Contact </PillLink>
 				</NavBar>
 			</Container>
 		);
