@@ -20,6 +20,10 @@ const settings = {
 	slidesToScroll: 1
 }
 
+const Arrow = styled.a`
+	font-size: 32px;
+`;
+
 export default class Work extends React.Component {
 	constructor(props) {
 		super(props);
@@ -39,23 +43,16 @@ export default class Work extends React.Component {
 	}
 
 	render() {
-		const projects = this.state.projects;
+		const projects = [];
+		const props = [];
 
-		// if (this.state.projects) {
-		// 	this.state.projects.forEach((p) => {
-				
-		// 	});
-		// } 
+		if (this.state.projects) {
+			this.state.projects.forEach((p, i) => {
+				projects.push(<View key={i}> <Project {...p}/> </View>);
+			});
+		} 
 
-		let props = {
-			title: projects[0].title,
-			description: projects[0].description,
-			tools: projects[0].tools,
-			technicalTwist: projects[0].technicalTwist,
-			mediaType: projects[0].mediaType,
-			mediaSrc: projects[0].mediaSrc,
-			link: projects[0].link
-		}
+		
 
 		return(
 			<Container>
@@ -63,14 +60,12 @@ export default class Work extends React.Component {
 					<ViewPager>
 						<Frame>
 							<Track ref={c => this.track = c} viewsToShow={1} infinite>
-								<View> <Project {...props}/> </View>
+								{projects}
 							</Track>
 						</Frame>
 						<nav className="pager-controls">
-						    <a className="pager-control pager-control--prev"
-						      onClick={() => this.track.prev()}>👈🏾</a>
-						    <a className="pager-control pager-control--next"
-						      onClick={() => this.track.next()}>👉🏾</a>
+						    <Arrow onClick={() => this.track.prev()}> &#x2190; </Arrow>
+						    <Arrow onClick={() => this.track.next()}> &#x2192; </Arrow>
 						</nav>
 					</ViewPager>
 				</Row>

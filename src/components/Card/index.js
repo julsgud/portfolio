@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
+import Youtube from 'react-youtube';
 
 const Container = styled(Col)`
 	text-align: left;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	max-width: 400px;
 	border-style: solid;
@@ -24,17 +25,21 @@ const CardContainer = ({children}) => {
 
 const Img = styled.img`
 	margin: 0;
-	margin-top: 22px;
+	margin-top: 6px;
 	width: 100%;
 `;
+
+const opts = {
+	width: '400',
+	height: '200'
+}
 
 const CardMedia = (props) => {
 	const {src, type} = props;
 
 	if (type == 'video') {
 		return(
-			<Col xs={12}>
-			</Col>
+			<Youtube videoId={props.mediaSrc} opts={opts}/>
 		);
 	} else {
 		return(
