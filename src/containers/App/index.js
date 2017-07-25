@@ -33,6 +33,10 @@ export default class App extends React.Component {
 		}
 	}
 
+	componentWillMount() {
+		window.emailjs.init("user_ivBQ7HFvKfldMbtGxGbBt");
+	}
+
 	render() {
 		return(
 			<Container>
@@ -43,6 +47,9 @@ export default class App extends React.Component {
 					<Route exact path="/" component={About}/>
 					<Route exact path="/work" render={() =>
 						<Work lang={this.state.lang}/>
+					}/>
+					<Route exact path="/contact" render={() =>
+						<Contact lang={this.state.lang}/>
 					}/>
 				</Col>
 			</Container>

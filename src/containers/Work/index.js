@@ -22,6 +22,8 @@ const settings = {
 
 const Arrow = styled.a`
 	font-size: 32px;
+	cursor: pointer;
+	cursor: hand;
 `;
 
 export default class Work extends React.Component {

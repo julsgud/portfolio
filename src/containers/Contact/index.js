@@ -2,20 +2,35 @@ import React from 'react';
 import {Row, Col} from 'react-flexbox-grid';
 import styled from 'styled-components';
 
-const Img = styled.img`
-	width: 100%;
-	height: 66%;
-	max-width: 912px;
-	z-index: 0;
-	/*margin: auto;*/
-	/*min-height: 900px;*/
+import ContactForm from 'components/ContactForm';
+
+const H1 = styled.h1`
+	font-weight: 300;
+	font-size: 32px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-bottom: 10px;
 `;
 
-export default class Home extends React.Component {
+export default class Contact extends React.Component {
+	constructor() {
+		super();
+
+		this.sendEmail = this.sendEmail.bind(this);
+	}
+
+	sendEmail(data) {
+		window.emailjs.send("gmail", "basic", data);
+	}
+
 	render() {
 		return(
-			<Row center="xs">
+			<Row>
+				<Col xs={12}>
+				<H1> Let's connect </H1>
 				
+					<ContactForm emailHandler={this.sendEmail}/>
+				</Col>
 			</Row>
 		);
 	}

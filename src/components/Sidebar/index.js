@@ -134,7 +134,7 @@ export default class Sidebar extends React.Component {
 					<Divider> | </Divider>
 					<PillLink to="/work" activeStyle={activeLinkStyle}> Work </PillLink>
 					<Divider> | </Divider>
-					<PillLink to="/about" activeStyle={activeLinkStyle}> Contact </PillLink>
+					<PillLink to="/contact" activeStyle={activeLinkStyle}> Contact </PillLink>
 				</NavBar>
 			</Container>
 		);

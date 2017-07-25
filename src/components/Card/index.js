@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
 import Youtube from 'react-youtube';
 
+import TextLink from 'components/TextLink';
+
 const Container = styled(Col)`
 	text-align: left;
 	margin: 0 auto;
@@ -36,10 +38,13 @@ const opts = {
 
 const CardMedia = (props) => {
 	const {src, type} = props;
-
+	const full = "https://www.youtube.com/embed/" + src;
 	if (type == 'video') {
 		return(
-			<Youtube videoId={props.mediaSrc} opts={opts}/>
+			<div className="container">
+				<iframe className="player" type="text/html" width="400" height="200" src={full} frameBorder="0" allowFullScreen/>
+				 {/*<Youtube videoId={props.mediaSrc} opts={opts}/>*/}
+			</div>
 		);
 	} else {
 		return(
@@ -75,10 +80,24 @@ const Subtitle = styled.div`
 	margin-bottom: 10px;
 `;
 
+const HardRow = styled(Row)`
+	margin-left: 0px;
+`;
+
 const CardSubtitle = (props) => {
-	return(
-		<Subtitle> {props.text} </Subtitle>
-	);
+	// console.log(props);
+	if (props.collab) {
+		return(
+			<HardRow>
+				<Subtitle> {props.text} </Subtitle> 
+				<TextLink link={props.collabLink} text={props.collab}/>
+			</HardRow>
+		)
+	} else {
+		return(
+			<Subtitle> {props.text} </Subtitle>
+		);
+	}
 }
 
 const Text = styled.div`

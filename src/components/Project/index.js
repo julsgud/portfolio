@@ -9,7 +9,7 @@ const Project = (props) => {
 			<CardTitle linkTo={props.titleLink} text={props.title}/>
 			<CardMedia type={props.mediaType} src={props.mediaSrc} link={props.link}/>
 			<CardTextContainer>
-				<CardSubtitle text={props.description}/>
+				<CardSubtitle text={props.description} collab={props.collab} collabLink={props.collabLink}/>
 				<CardPrimaryText text={props.tools}/>
 				<CardSecondaryText text={props.technicalTwist}/>
 			</CardTextContainer>

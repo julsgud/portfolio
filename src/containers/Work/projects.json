@@ -3,6 +3,8 @@
 		{
 			"title": "plasticsrev.club",
 			"description": "Web app for music project release",
+			"collab": "",
+			"collabLink": "",
 			"tools": "React, Facebook API, Cloudinary, Kairos Facial Recognition API",
 			"technicalTwist": "Get user images from FB, analyze for facial recognition, create artwork using images and FR info. Save images and share to FB.",
 			"mediaType": "image",
@@ -12,6 +14,8 @@
 		{
 			"title": "icanchase.github.io",
 			"description": "Web app for interactive Puzzle/Sequencer",
+			"collab": "",
+			"collabLink": "",
 			"tools": "p5js, Youtube API",
 			"technicalTwist": "Clean and simple UI that requires no textual instructions.",
 			"mediaType": "image",
@@ -20,7 +24,9 @@
 		},
 		{
 			"title": "ICCD - Ciclos",
-			"description": "Created with Pamela Hersch (Video and Editing)",
+			"description": "Video + Editing by",
+			"collab": "Pamela Hersch",
+			"collabLink": "https://www.instagram.com/pamelahersch/",
 			"tools": "Processing",
 			"technicalTwist": "Convey concept of entropy through font and video footage processing. Use live videos of dancer/singer through custom filters to create interaction with a digital, dreamy aesthetic.",
 			"mediaType": "video",
@@ -30,6 +36,8 @@
 		{
 			"title": "Texture Modular",
 			"description": "Visual Performance Software",
+			"collab": "",
+			"collabLink": "",
 			"tools": "Max for Live, Max/MSP/Jitter, OSC",
 			"technicalTwist": "Building modules (LFOs, Envelopes, etc) from scratch. Control visual system from Ableton Live using OSC protocol and original Max for Live devices.",
 			"mediaType": "video",
@@ -38,11 +46,13 @@
 		},
 		{
 			"title": "ICCD Album Teasers",
-			"description": "Created with Julio Derbez (Graphic Design)",
+			"description": "Graphic Design by",
+			"collab": "Julio Derbez",
+			"collabLink": "https://www.instagram.com/pixelfeliz/",
 			"tools": "Processing, Final Cut X",
 			"technicalTwist": "Digital content creation out of static designs to preview each single off the album.",
 			"mediaType": "video",
-			"mediaSrc": "PLdRNxsSxLO3yEYPUODyQdb92rNbQsbd69W",
+			"mediaSrc": "videoseries?list=PLRNxsSxLO3yEYPUODyQdb92rNbQsbd69W",
 			"link": ""
 		}
 	],
