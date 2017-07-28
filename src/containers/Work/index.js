@@ -57,7 +57,7 @@ export default class Work extends React.Component {
 		
 
 		return(
-			<Container>
+			<Container xs={11}>
 				<Row center="xs">
 					<ViewPager>
 						<Frame>

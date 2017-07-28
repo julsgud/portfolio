@@ -40,10 +40,10 @@ export default class App extends React.Component {
 	render() {
 		return(
 			<Container>
-				<Col xs={3}>
+				<Col xs={5}>
 					<Sidebar/>
 				</Col>
-				<Col xs={9}>
+				<Col xs={7}>
 					<Route exact path="/" component={About}/>
 					<Route exact path="/work" render={() =>
 						<Work lang={this.state.lang}/>

@@ -17,7 +17,7 @@ const Container = styled(Col)`
 
 const ImageTitleContainer = styled(Col)`
 	margin-top: 45px;
-	margin-left: 30px;
+	margin-left: 25px;
 `;
 
 const CircleLink = styled(NavLink)`
@@ -73,7 +73,7 @@ const BlueH2 = styled.h2`
 const PillLink = styled(NavLink)`
 	/*width: 100px;*/
 	/*height: 100px;*/
-	letter-spacing: .6px;
+	letter-spacing: .3px;
 	margin-top: 0px;
 	margin-bottom: 4px;
 	font-weight: 400;
@@ -103,7 +103,7 @@ const Divider = styled.h1`
 
 const NavBar = styled(Row)`
 	margin-top: 25px;
-	margin-left: 15px;
+	margin-left: 12px;
 `;
 
 const activeLinkStyle = {
@@ -114,7 +114,7 @@ const activeLinkStyle = {
 export default class Sidebar extends React.Component {
 	render() {
 		return(
-			<Container>
+			<Container xs={12}>
 				<ImageTitleContainer>
 					<Row>
 						<Img src="http://res.cloudinary.com/julsgc/image/upload/v1499787752/ICCD_B-52_b2bzpt_Cropped_ktaijn.jpg"></Img>

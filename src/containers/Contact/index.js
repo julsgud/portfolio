@@ -4,12 +4,22 @@ import styled from 'styled-components';
 
 import ContactForm from 'components/ContactForm';
 
+const Container = styled(Col)`
+	margin-top: 50px;
+`;
+
 const H1 = styled.h1`
 	font-weight: 300;
-	font-size: 32px;
+	font-size: 24px;
 	margin-top: 10px;
-	margin-left: 15px;
 	margin-bottom: 10px;
+`;
+
+const icon = styled.i`
+	font-size: 48px;
+	font-weight: 300;
+	color: rgba(29, 29, 29, 1);
+	font-family: 'Roboto Mono', monospace;
 `;
 
 export default class Contact extends React.Component {
@@ -25,13 +35,10 @@ export default class Contact extends React.Component {
 
 	render() {
 		return(
-			<Row>
-				<Col xs={12}>
-				<H1> Let's connect </H1>
-				
-					<ContactForm emailHandler={this.sendEmail}/>
-				</Col>
-			</Row>
+			<Container xs={11}>
+				<H1> Let's connect! </H1> 
+				<ContactForm emailHandler={this.sendEmail}/>
+			</Container>
 		);
 	}
 }
