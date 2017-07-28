@@ -86,8 +86,7 @@ const ContactForm = (props) => {
 	return (
 			<Form
 			    onSubmit={(data) => {
-			      // props.emailHandler(data);
-			      console.log(data);
+			      props.emailHandler(data);
 			    }}
 			    validate={({name, email, body}) => {
 			      return {

@@ -12,7 +12,7 @@ const Container = styled(Col)`
 	margin-top: 50px;
 `;
 
-const settings = {
+const carouselSettings = {
 	dots: true,
 	infinite: true,
 	speed: 500,
@@ -46,15 +46,12 @@ export default class Work extends React.Component {
 
 	render() {
 		const projects = [];
-		const props = [];
 
 		if (this.state.projects) {
 			this.state.projects.forEach((p, i) => {
 				projects.push(<View key={i}> <Project {...p}/> </View>);
 			});
 		} 
-
-		
 
 		return(
 			<Container xs={11}>

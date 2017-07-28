@@ -19,7 +19,7 @@
 			"tools": "p5js, Youtube API",
 			"technicalTwist": "Clean and simple UI that requires no textual instructions.",
 			"mediaType": "image",
-			"mediaSrc": "https://res.cloudinary.com/julsgc/image/upload/v1499989825/icanchase.png",
+			"mediaSrc": "https://res.cloudinary.com/julsgc/image/upload/v1501209473/icanchase.png",
 			"link": "https://icanchase.github.io"
 		},
 		{
@@ -51,7 +51,7 @@
 			"collabLink": "https://www.instagram.com/pixelfeliz/",
 			"tools": "Processing, Final Cut X",
 			"technicalTwist": "Digital content creation out of static designs to preview each single off the album.",
-			"mediaType": "video",
+			"mediaType": "playlist",
 			"mediaSrc": "videoseries?list=PLRNxsSxLO3yEYPUODyQdb92rNbQsbd69W",
 			"link": ""
 		}

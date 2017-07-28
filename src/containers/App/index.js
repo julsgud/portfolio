@@ -6,6 +6,8 @@ import {Row, Col} from 'react-flexbox-grid';
 import About from 'containers/About';
 import Work from 'containers/Work';
 import Contact from 'containers/Contact';
+import Success from 'containers/Success';
+
 import Header from 'components/Header';
 import Sidebar from 'components/Sidebar';
 
@@ -48,8 +50,11 @@ export default class App extends React.Component {
 					<Route exact path="/work" render={() =>
 						<Work lang={this.state.lang}/>
 					}/>
-					<Route exact path="/contact" render={() =>
-						<Contact lang={this.state.lang}/>
+					<Route exact path="/contact" render={({history}) =>
+						<Contact lang={this.state.lang} history={history}/>
+					}/>
+					<Route exact path="/contact/success" lang={this.state.lang} render={() => 
+						<Success/>
 					}/>
 				</Col>
 			</Container>

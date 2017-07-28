@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import {Row, Col} from 'react-flexbox-grid';
 
-const leftMargin = 12;
+import IconLink from 'components/IconLink';
 
 const Container = styled(Col)`
 	padding: 0;

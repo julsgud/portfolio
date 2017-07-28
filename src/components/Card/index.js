@@ -12,9 +12,6 @@ const Container = styled(Col)`
 	max-width: 400px;
 	border-style: solid;
 	border-width: 0px;
-/*	-webkit-box-shadow: 0px 11px 30px -8px rgba(29,29,29,1);
-	moz-box-shadow: 0px 11px 30px -8px rgba(29,29,29,1);
-	box-shadow: 0px 11px 30px -8px rgba(29,29,29,1);*/
 `;
 
 const CardContainer = ({children}) => {
@@ -38,11 +35,20 @@ const opts = {
 
 const CardMedia = (props) => {
 	const {src, type} = props;
-	const full = "https://www.youtube.com/embed/" + src;
+	
 	if (type == 'video') {
+		const fullSrc = "https://www.youtube.com/embed/" + src + "?showinfo=0";
 		return(
 			<div className="container">
-				<iframe className="player" type="text/html" width="400" height="200" src={full} frameBorder="0" allowFullScreen/>
+				<iframe className="player" type="text/html" width="400" height="200" src={fullSrc} frameBorder="0" allowFullScreen/>
+				 {/*<Youtube videoId={props.mediaSrc} opts={opts}/>*/}
+			</div>
+		);
+	} else if (type == 'playlist') {
+		const fullSrc = "https://www.youtube.com/embed/" + src;
+		return(
+			<div className="container">
+				<iframe className="player" type="text/html" width="400" height="200" src={fullSrc} frameBorder="0" allowFullScreen/>
 				 {/*<Youtube videoId={props.mediaSrc} opts={opts}/>*/}
 			</div>
 		);
