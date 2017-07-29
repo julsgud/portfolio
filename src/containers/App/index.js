@@ -40,24 +40,44 @@ export default class App extends React.Component {
 	}
 
 	render() {
-		return(
-			<Container>
-				<Col xs={5}>
-					<Sidebar/>
-				</Col>
-				<Col xs={7}>
-					<Route exact path="/" component={About}/>
-					<Route exact path="/work" render={() =>
-						<Work lang={this.state.lang}/>
-					}/>
-					<Route exact path="/contact" render={({history}) =>
-						<Contact lang={this.state.lang} history={history}/>
-					}/>
-					<Route exact path="/contact/success" lang={this.state.lang} render={() => 
-						<Success/>
-					}/>
-				</Col>
-			</Container>
-		);
+		if (window.innerWidth < 668) {
+			return(
+				<Container>
+					<Col xs={12}>
+						<Sidebar/>
+						<Route exact path="/" component={About}/>
+						<Route exact path="/work" render={() =>
+							<Work lang={this.state.lang}/>
+						}/>
+						<Route exact path="/contact" render={({history}) =>
+							<Contact lang={this.state.lang} history={history}/>
+						}/>
+						<Route exact path="/contact/success" lang={this.state.lang} render={() => 
+							<Success/>
+						}/>
+					</Col>
+				</Container>
+			);
+		} else {
+			return(
+				<Container>
+					<Col xs={5}>
+						<Sidebar/>
+					</Col>
+					<Col xs={7}>
+						<Route exact path="/" component={About}/>
+						<Route exact path="/work" render={() =>
+							<Work lang={this.state.lang}/>
+						}/>
+						<Route exact path="/contact" render={({history}) =>
+							<Contact lang={this.state.lang} history={history}/>
+						}/>
+						<Route exact path="/contact/success" lang={this.state.lang} render={() => 
+							<Success/>
+						}/>
+					</Col>
+				</Container>
+			);
+		}
 	}
 }
