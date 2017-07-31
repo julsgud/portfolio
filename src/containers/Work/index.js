@@ -7,9 +7,8 @@ import {ViewPager, Frame, Track, View} from 'react-view-pager';
 import json from './projects.json';
 import Project from 'components/Project'
 
-const Container = styled(Col)`
-	margin: 0;
-	margin-top: 50px;
+const WorkContainer = styled(Col)`
+	margin: 0 1.75em 2em 1.75em;
 `;
 
 const carouselSettings = {
@@ -54,8 +53,8 @@ export default class Work extends React.Component {
 		} 
 
 		return(
-			<Container xs={11}>
-				<Row center="xs">
+			<Row center="xs">
+				<WorkContainer xs={12}>
 					<ViewPager>
 						<Frame>
 							<Track ref={c => this.track = c} viewsToShow={1} infinite>
@@ -67,8 +66,8 @@ export default class Work extends React.Component {
 						    <Arrow onClick={() => this.track.next()}> &#x2192; </Arrow>
 						</nav>
 					</ViewPager>
-				</Row>
-			</Container>
+				</WorkContainer>
+			</Row>
 		);
 	}
-}
+}	

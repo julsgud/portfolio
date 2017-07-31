@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const A = styled.a`
-	color: rgba(29, 29, 29, 1);
 	font-weight: 300;
-	font-size: 16px;
+	font-size: 1.12em;
+	color: rgba(29, 29, 29, 1);
 	margin: 0;
 	margin-left: 8px;
 	text-decoration: underline;

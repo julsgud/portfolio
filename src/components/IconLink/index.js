@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const A = styled.a`
-	color: rgba(29, 29, 29, 1);
 	font-weight: 300;
+	font-size: 1.5em;
+	color: rgba(29, 29, 29, 1);
 	text-decoration: none;
 	cursor: pointer;
 	cursor: hand;

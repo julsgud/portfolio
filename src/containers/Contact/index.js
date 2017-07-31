@@ -5,15 +5,15 @@ import styled from 'styled-components';
 import ContactForm from 'components/ContactForm';
 import IconLink from 'components/IconLink';
 
-const Container = styled(Col)`
-	margin-top: 50px;
+const ContactContainer = styled(Col)`
+	width: 82%;
+	margin: 0 1.75em 2em 1.75em;
 `;
 
-const H1 = styled.h1`
+const Title = styled.div`
 	font-weight: 300;
-	font-size: 24px;
-	margin-top: 10px;
-	margin-bottom: 15px;
+	font-size: 1.5em;
+	margin-bottom: 1em;
 `;
 
 const icon = styled.i`
@@ -24,14 +24,13 @@ const icon = styled.i`
 `;
 
 const SocialMediaRow = styled(Row)`
-	margin: 12px;
+	margin: 1em;
 `;
 
 const IconLinkStyled = styled(IconLink)`
-	margin-bottom: 4px;
 	font-weight: 400;
 	text-align: center;
-	font-size: 24px;
+	font-size: 2em;
 	color: rgba(29,29,29,1);
 	text-decoration: none;
 	&:hover {
@@ -57,8 +56,8 @@ export default class Contact extends React.Component {
 
 	render() {
 		return(
-			<Container xs={10}>
-				<H1> Let's connect... </H1>
+			<ContactContainer>
+				<Title> Let's connect... </Title>
 				<SocialMediaRow center="xs">
 					<Col xs={4}>
 						<IconLinkStyled link="https://github.com/julsgud" icon="github"/>
@@ -71,7 +70,7 @@ export default class Contact extends React.Component {
 					</Col>
 				</SocialMediaRow>
 				<ContactForm emailHandler={this.sendEmail}/>
-			</Container>
+			</ContactContainer>
 		);
 	}
 }
