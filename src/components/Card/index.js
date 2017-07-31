@@ -33,6 +33,8 @@ const opts = {
 	height: '200'
 }
 
+const width = window.innerWidth - window.innerWidth/12;
+
 const CardMedia = (props) => {
 	const {src, type} = props;
 	
@@ -40,7 +42,7 @@ const CardMedia = (props) => {
 		const fullSrc = "https://www.youtube.com/embed/" + src + "?showinfo=0";
 		return(
 			<div className="container">
-				<iframe className="player" type="text/html" width="400" height="200" src={fullSrc} frameBorder="0" allowFullScreen/>
+				<iframe className="player" type="text/html" width={width} height="200" src={fullSrc} frameBorder="0" allowFullScreen/>
 				 {/*<Youtube videoId={props.mediaSrc} opts={opts}/>*/}
 			</div>
 		);

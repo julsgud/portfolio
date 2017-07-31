@@ -23,7 +23,7 @@ const icon = styled.i`
 	font-family: 'Roboto Mono', monospace;
 `;
 
-const SocialMediaBar = styled(Row)`
+const SocialMediaRow = styled(Row)`
 	margin: 12px;
 `;
 
@@ -57,9 +57,9 @@ export default class Contact extends React.Component {
 
 	render() {
 		return(
-			<Container xs={11}>
+			<Container xs={10}>
 				<H1> Let's connect... </H1>
-				<SocialMediaBar center="xs">
+				<SocialMediaRow center="xs">
 					<Col xs={4}>
 						<IconLinkStyled link="https://github.com/julsgud" icon="github"/>
 					</Col>
@@ -69,7 +69,7 @@ export default class Contact extends React.Component {
 					<Col xs={4}>
 						<IconLinkStyled link="https://www.facebook.com/juls.gc" icon="facebook"/>
 					</Col>
-				</SocialMediaBar>
+				</SocialMediaRow>
 				<ContactForm emailHandler={this.sendEmail}/>
 			</Container>
 		);

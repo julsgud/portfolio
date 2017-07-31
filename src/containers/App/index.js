@@ -26,6 +26,13 @@ const Container = styled.div`
 	/*font-family: 'Lato', sans-serif;*/
 `;
 
+const MainContainer = styled(Row)`
+	margin: 0;
+	padding: 20;
+	color: rgba(29, 29, 29, 1);
+	font-family: 'Roboto Mono', monospace;
+`;
+
 export default class App extends React.Component {
 	constructor() {
 		super();
@@ -42,21 +49,19 @@ export default class App extends React.Component {
 	render() {
 		if (window.innerWidth < 668) {
 			return(
-				<Container>
-					<Col xs={12}>
-						<Sidebar/>
-						<Route exact path="/" component={About}/>
-						<Route exact path="/work" render={() =>
-							<Work lang={this.state.lang}/>
-						}/>
-						<Route exact path="/contact" render={({history}) =>
-							<Contact lang={this.state.lang} history={history}/>
-						}/>
-						<Route exact path="/contact/success" lang={this.state.lang} render={() => 
-							<Success/>
-						}/>
-					</Col>
-				</Container>
+				<MainContainer center="xs">
+					<Sidebar/>
+					<Route exact path="/" component={About}/>
+					<Route exact path="/work" render={() =>
+						<Work lang={this.state.lang}/>
+					}/>
+					<Route exact path="/contact" render={({history}) =>
+						<Contact lang={this.state.lang} history={history}/>
+					}/>
+					<Route exact path="/contact/success" lang={this.state.lang} render={() => 
+						<Success/>
+					}/>
+				</MainContainer>
 			);
 		} else {
 			return(

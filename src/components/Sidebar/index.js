@@ -6,18 +6,22 @@ import {Row, Col} from 'react-flexbox-grid';
 
 import IconLink from 'components/IconLink';
 
-const Container = styled(Col)`
-	padding: 0;
-	margin: 0;
-	border-style: solid;
-	border-color: #333;
-	border: 0px;
-	border-right: 1px;
+const height = window.innerHeight;
+
+const Container = styled(Row)`
+	text-align: center;
+	margin-top: 45px;
+
+	@media (max-width: 668) {
+		margin-top: 0px;
+	}
 `;
 
+const width = window.innerWidth * .66 + "px";
+
 const ImageTitleContainer = styled(Col)`
-	margin-top: 45px;
-	margin-left: 25px;
+	width: ${width};
+	margin: 0px;
 `;
 
 const CircleLink = styled(NavLink)`
@@ -37,30 +41,31 @@ const CircleLink = styled(NavLink)`
 `;
 
 const Img = styled.img`
-	width: 180px;
-	height: 180px;
-	margin: 0px;
-	/*border-radius: 50%;*/
+	width: ${width};
+	height: ${width};
 `;
 
+const spacing = window.innerWidth/75;
+
 const Name = styled.h1`
-	letter-spacing: 1px;
 	font-weight: 400;
 	font-size: 24px;
 	margin-top: 10px;
 	margin-left: 0px;
 	margin-bottom: 10px;
+	letter-spacing: ${spacing + "px"};
 `;
 
 const Title = styled.h2`
-	letter-spacing: 1.3px;
+	letter-spacing: ${spacing/1.5 + "px"};
 	font-weight: 300;
-	font-size: 15px;
+	font-size: 16px;
 	margin-bottom: 3px;
 	margin-top: 3px;
 `;
 
 const BlueH2 = styled.h2`
+	letter-spacing: ${spacing/1.5 + "px"};
 	font-weight: 300;
 	color: rgba(122, 220, 220, 1);
 	font-size: 15px;
@@ -71,17 +76,12 @@ const BlueH2 = styled.h2`
 `;
 
 const PillLink = styled(NavLink)`
-	/*width: 100px;*/
-	/*height: 100px;*/
-	letter-spacing: .3px;
-	margin-top: 0px;
+	text-align: center;
 	margin-bottom: 4px;
 	font-weight: 400;
 	line-height: 32px;
 	text-align: center;
 	font-size: 15px;
-	margin-left: 5px;
-	margin-right: 5px;
 	color: rgba(29,29,29,1);
 	text-decoration: none;
 	&:hover {
@@ -93,7 +93,7 @@ const PillLink = styled(NavLink)`
 	};
 `;
 
-const Divider = styled.h1`
+const Divider = styled(Col)`
 	margin: 0;
 	padding: 0;
 	font-weight: 700;
@@ -101,9 +101,12 @@ const Divider = styled.h1`
 	font-size: 15px;
 `;
 
+const navBarWidth = window.innerWidth + "px";
+
 const NavBar = styled(Row)`
-	margin-top: 25px;
-	margin-left: 12px;
+	margin: auto;
+	margin-top: 13px;
+	max-width: ${navBarWidth};
 `;
 
 const activeLinkStyle = {
@@ -114,28 +117,28 @@ const activeLinkStyle = {
 export default class Sidebar extends React.Component {
 	render() {
 		return(
-			<Container xs={12}>
+			<Container>
 				<ImageTitleContainer>
-					<Row>
+					<Row center="xs">
 						<Img src="http://res.cloudinary.com/julsgc/image/upload/v1499787752/ICCD_B-52_b2bzpt_Cropped_ktaijn.jpg"></Img>
 					</Row>
-					<Row>
+					<Row center="xs">
 						<Name> Julio Gudiño </Name>
 					</Row>
-					<Row>
+					<Row center="xs">
 						<Title> Digital Production </Title>
 					</Row>
-					<Row>
+					<Row center="xs">
 						<BlueH2> & </BlueH2> <Title> Web Development </Title>
 					</Row>
+					<NavBar around="xs" center="xs">
+						<PillLink to="/" exact activeStyle={activeLinkStyle}> About </PillLink>
+						<Divider> | </Divider>
+						<PillLink to="/work" activeStyle={activeLinkStyle}> Work </PillLink>
+						<Divider> | </Divider>
+						<PillLink to="/contact" activeStyle={activeLinkStyle}> Contact </PillLink>
+					</NavBar>
 				</ImageTitleContainer>
-				<NavBar>
-					<PillLink to="/" exact activeStyle={activeLinkStyle}> About </PillLink>
-					<Divider> | </Divider>
-					<PillLink to="/work" activeStyle={activeLinkStyle}> Work </PillLink>
-					<Divider> | </Divider>
-					<PillLink to="/contact" activeStyle={activeLinkStyle}> Contact </PillLink>
-				</NavBar>
 			</Container>
 		);
 	}
