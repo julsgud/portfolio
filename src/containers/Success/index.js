@@ -3,20 +3,31 @@ import {Row, Col} from 'react-flexbox-grid';
 import styled from 'styled-components';
 
 const Container = styled(Col)`
-	margin-top: 100px;
+	margin: 0 1.75em 2em 1.75em;
+	padding: 0;
 `;
 
-const H1 = styled.h1`
+const Title = styled.div`
 	font-weight: 300;
-	font-size: 24px;
-	margin-top: 10px;
-	margin-bottom: 15px;
+	font-size: 1.5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+`;
+
+const P = styled.p`
+	padding: 0;
+	margin: 0;
+	font-size: 4em;
+	color: rgba(29, 29, 29, .95);
 `;
 
 const Success = (props) => {
 	return(
-		<Container xs={10}>
-			<H1> Thanks for writing, I'll be in touch soon! </H1>
+		<Container xs={12}>
+			<Title> Thanks for writing, I'll be in touch soon! </Title>
+			<Row center="xs">
+				<P><i className="fa fa-thumbs-up" aria-hidden="true"></i></P>
+			</Row>
 		</Container>
 	);
 };

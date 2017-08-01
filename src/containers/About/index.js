@@ -2,8 +2,15 @@ import React from 'react';
 import {Row, Col} from 'react-flexbox-grid';
 import styled from 'styled-components';
 
+import media from 'styles';
+
 const AboutContainer = styled(Col)`
 	margin: 0 1.75em 2em 1.75em;
+
+	${media.medium`
+		margin-top: 4em;
+		margin-left: -2em;
+	`};
 `;
 
 const RedTitle = styled.div`

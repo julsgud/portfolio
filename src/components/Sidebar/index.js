@@ -8,11 +8,21 @@ import IconLink from 'components/IconLink';
 
 const AvatarNavContainer = styled(Col)`
 	margin-top: 1.5em;
+
+	${media.medium`
+		margin-top: 3em;
+		margin-left: -2em;
+	`}
 `;
 
 const Img = styled.img`
 	width: 90%;
 	height: 90%;
+
+	${media.medium`
+		max-width: 200px;
+		max-height: 200px;
+	`}
 `;
 
 const Name = styled.div`
@@ -21,15 +31,34 @@ const Name = styled.div`
 	letter-spacing: .1em;
 	margin-top: .5em;
 	margin-bottom: .4em;
+
+	${media.medium`
+		font-size: 1.2em;
+		letter-spacing: .4vw;
+	`}
+
+	${media.large`
+		font-size: 1.5em;
+		letter-spacing: .11em;
+	`}
 `;
 
 const Title = styled.div`
 	font-weight: 300;
 	font-size: 1.06em;
-	letter-spacing: .05em;
+	letter-spacing: .1em;
 	margin-bottom: .2em;
 	margin-top: .2em;
 
+	${media.medium`
+		font-size: .8em;
+		letter-spacing: .25vw;
+	`}
+
+	${media.large`
+		font-size: 1em;
+		letter-spacing: .1em;
+	`}
 `;
 
 const BlueTitle = styled(Title)`
@@ -40,6 +69,16 @@ const BlueTitle = styled(Title)`
 const NavBar = styled(Row)`
 	margin: auto;
 	margin-top: 1.25em;
+
+	${media.medium`
+		font-size: .85em;
+		max-width: 24vw;
+	`}
+
+	${media.large`
+		font-size: 1em;
+		max-width: 200px;
+	`}
 `;
 
 const PillLink = styled(NavLink)`
@@ -89,7 +128,7 @@ export default class Sidebar extends React.Component {
 					<Row center="xs">
 						<BlueTitle> & </BlueTitle> <Title> Web Development </Title>
 					</Row>
-					<NavBar around="xs" center="xs">
+					<NavBar between="xs" center="xs">
 						<PillLink to="/" exact activeStyle={activeLinkStyle}> About </PillLink>
 						<Divider> | </Divider>
 						<PillLink to="/work" activeStyle={activeLinkStyle}> Work </PillLink>

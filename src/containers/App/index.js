@@ -11,23 +11,16 @@ import Success from 'containers/Success';
 import Header from 'components/Header';
 import Sidebar from 'components/Sidebar';
 
-const Container = styled.div`
-	width: 100%;
-	height: 100%;
-	max-width: 920px;
-	background: #f4f1ec;
-	z-index: 0;
-	display: flex;
-	flex-direction: row;
+const ColContainer = styled(Col)`
+	margin: 0;
+	padding: 0;
+	background-color: #fdfdfd;
 	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
 	font-size: 16px;
-	margin: 0 auto;
-	padding: 0;
-	/*font-family: 'Lato', sans-serif;*/
 `;
 
-const MainContainer = styled(Col)`
+const RowContainer = styled(Row)`
 	margin: 0;
 	padding: 0;
 	background-color: #fdfdfd;
@@ -58,10 +51,16 @@ export default class App extends React.Component {
 		window.emailjs.init("user_ivBQ7HFvKfldMbtGxGbBt");
 	}
 
+	componentDidMount() {
+		window.onresize = () => {
+			this.forceUpdate();
+		}
+	}
+
 	render() {
 		if (window.innerWidth < 668) {
 			return(
-				<MainContainer>
+				<ColContainer>
 					<Sidebar/>
 					<HR/>
 					<Route exact path="/" component={About}/>
@@ -74,11 +73,11 @@ export default class App extends React.Component {
 					<Route exact path="/contact/success" lang={this.state.lang} render={() => 
 						<Success/>
 					}/>
-				</MainContainer>
+				</ColContainer>
 			);
 		} else {
 			return(
-				<Container>
+				<RowContainer>
 					<Col xs={5}>
 						<Sidebar/>
 					</Col>
@@ -94,7 +93,7 @@ export default class App extends React.Component {
 							<Success/>
 						}/>
 					</Col>
-				</Container>
+				</RowContainer>
 			);
 		}
 	}

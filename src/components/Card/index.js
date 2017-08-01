@@ -2,11 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
 
+import media from 'styles';
+
 import TextLink from 'components/TextLink';
 
 const Container = styled(Col)`
 	text-align: left;
 	margin: 0 1.75em 2em 1.75em;
+
+	${media.medium`
+		margin-bottom: 1em;
+	`};
 `;
 
 const CardContainer = ({children}) => {
@@ -17,7 +23,13 @@ const CardContainer = ({children}) => {
 	);
 }
 
-const width = window.innerWidth - (16*3.5);
+let width;
+
+if (window.innerWidth < 668) {
+	width = window.innerWidth - (16*3.5);
+} else {
+	width = window.innerWidth*.48;
+}
 
 const Img = styled.img`
 	width: ${width + "px"};
@@ -59,6 +71,14 @@ const Title = styled.div`
 	letter-spacing: 1px;
 	text-decoration: none;
 	color: rgba(29, 29, 29,1);
+
+	${media.medium`
+		font-size: 1.2em;
+	`};
+
+	${media.large`
+		font-size: 1.5em;
+	`};
 `;
 
 const CardTitle = (props) => {
@@ -71,6 +91,14 @@ const Subtitle = styled.div`
 	font-weight: 300;
 	font-size: 1.12em;
 	margin-bottom: .75em;
+
+	${media.medium`
+		font-size: .9em;
+	`};
+
+	${media.large`
+		font-size: 1.12em;
+	`};
 `;
 
 const HardRow = styled(Row)`
@@ -98,6 +126,14 @@ const Text = styled.div`
 	font-weight: 300;
 	font-size: 1em;
 	margin: 0;
+
+	${media.medium`
+		font-size: .9em;
+	`};
+
+	${media.large`
+		font-size: 1em;
+	`};
 `;
 
 const CardPrimaryText = (props) => {

@@ -4,11 +4,19 @@ import styled from 'styled-components';
 import update from 'immutability-helper';
 import {ViewPager, Frame, Track, View} from 'react-view-pager';
 
+import media from 'styles';
+
 import json from './projects.json';
 import Project from 'components/Project'
 
 const WorkContainer = styled(Col)`
 	margin: 0 1.75em 2em 1.75em;
+
+	${media.medium`
+		margin-top: 3em;
+		margin-left: -2em;
+		marging-bottom: 0;
+	`};
 `;
 
 const carouselSettings = {

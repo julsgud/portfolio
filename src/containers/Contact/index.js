@@ -2,18 +2,38 @@ import React from 'react';
 import {Row, Col} from 'react-flexbox-grid';
 import styled from 'styled-components';
 
+import media from 'styles';
+
 import ContactForm from 'components/ContactForm';
 import IconLink from 'components/IconLink';
 
 const ContactContainer = styled(Col)`
-	width: 82%;
 	margin: 0 1.75em 2em 1.75em;
+	padding: 0;
+
+	${media.medium`
+		margin-top: 3em;
+		width: 80%;
+	`};
+
+	${media.large`
+		margin-top: 3em;
+		margin-left: -1em;
+		width: 80%;
+	`};
 `;
 
 const Title = styled.div`
 	font-weight: 300;
 	font-size: 1.5em;
-	margin-bottom: 1em;
+
+	${media.medium`
+		font-size: 1.2em;
+	`};
+
+	${media.large`
+		font-size: 1.5em;
+	`};
 `;
 
 const icon = styled.i`
@@ -24,14 +44,15 @@ const icon = styled.i`
 `;
 
 const SocialMediaRow = styled(Row)`
-	margin: 0 1em 1em 1em;
+	margin: 1em 1em 1em 1em;
+	padding: 0;
 `;
 
 const IconLinkStyled = styled(IconLink)`
 	font-weight: 400;
 	text-align: center;
-	font-size: 2em;
-	color: rgba(29,29,29,1);
+	font-size: 1.6em;
+	color: rgba(29,29,29,.95);
 	text-decoration: none;
 	&:hover {
 		color: rgba(122, 220, 220, 1);
@@ -40,6 +61,10 @@ const IconLinkStyled = styled(IconLink)`
 		text-decoration: underline;
 		color: rgba(251, 74, 35, 1);
 	};
+
+	${media.medium`
+		font-size: 1.5em;
+	`};
 `;
 
 export default class Contact extends React.Component {
@@ -56,7 +81,7 @@ export default class Contact extends React.Component {
 
 	render() {
 		return(
-			<ContactContainer>
+			<ContactContainer xs={12}>
 				<Title> Let's connect! </Title>
 				<SocialMediaRow center="xs">
 					<Col xs={4}>
