@@ -1,8 +1,11 @@
 import React from 'react';
 import {Row, Col} from 'react-flexbox-grid';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import {fadeInDown} from 'react-animations';
 
 import media from 'styles';
+
+const ani = keyframes`${fadeInDown}`;
 
 const AboutContainer = styled(Col)`
 	margin: 0 1.75em 2em 1.75em;
@@ -18,6 +21,7 @@ const RedTitle = styled.div`
 	font-weight: 400;
 	font-size: 1.5em;
 	margin-bottom: 1em;
+	animation: 1.5s ${ani};
 `;
 
 const Description = styled.p`

@@ -1,11 +1,14 @@
 import React from 'react';
 import {Row, Col} from 'react-flexbox-grid';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import {fadeInRight} from 'react-animations';
 
 import media from 'styles';
 
 import ContactForm from 'components/ContactForm';
 import IconLink from 'components/IconLink';
+
+const ani = keyframes`${fadeInRight}`;
 
 const ContactContainer = styled(Col)`
 	margin: 0 1.75em 2em 1.75em;
@@ -34,6 +37,8 @@ const Title = styled.div`
 	${media.large`
 		font-size: 1.5em;
 	`};
+
+	animation: 1.5s ${ani};
 `;
 
 const icon = styled.i`
