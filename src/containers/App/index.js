@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
 
 import About from 'containers/About';
@@ -11,19 +11,31 @@ import Success from 'containers/Success';
 import Header from 'components/Header';
 import Sidebar from 'components/Sidebar';
 
-const Container = styled.div`
-	width: 100%;
-	height: 100%;
-	max-width: 920px;
-	background: #fdfdfd;
-	z-index: 0;
-	display: flex;
-	flex-direction: row;
+const ColContainer = styled(Col)`
+	margin: 0;
+	padding: 0;
+	background-color: #fdfdfd;
 	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
-	margin: 0 auto;
+	font-size: 16px;
+`;
+
+const RowContainer = styled(Row)`
+	margin: 0;
 	padding: 0;
-	/*font-family: 'Lato', sans-serif;*/
+	background-color: #fdfdfd;
+	color: rgba(29, 29, 29, 1);
+	font-family: 'Roboto Mono', monospace;
+	font-size: 16px;
+`;
+
+const HR = styled(Row)`
+	margin: 2.5em 1.75em 2em 1.75em;
+	padding: 0;
+	border: 0;
+	clear:both;
+	height: 1px;              
+	background-color:rgba(29, 29, 29, .8);
 `;
 
 export default class App extends React.Component {
@@ -39,28 +51,33 @@ export default class App extends React.Component {
 		window.emailjs.init("user_ivBQ7HFvKfldMbtGxGbBt");
 	}
 
+	componentDidMount() {
+		window.onresize = () => {
+			this.forceUpdate();
+		}
+	}
+
 	render() {
 		if (window.innerWidth < 668) {
 			return(
-				<Container>
-					<Col xs={12}>
-						<Sidebar/>
-						<Route exact path="/" component={About}/>
-						<Route exact path="/work" render={() =>
-							<Work lang={this.state.lang}/>
-						}/>
-						<Route exact path="/contact" render={({history}) =>
-							<Contact lang={this.state.lang} history={history}/>
-						}/>
-						<Route exact path="/contact/success" lang={this.state.lang} render={() => 
-							<Success/>
-						}/>
-					</Col>
-				</Container>
+				<ColContainer>
+					<Sidebar/>
+					<HR/>
+					<Route exact path="/" component={About}/>
+					<Route exact path="/work" render={() =>
+						<Work lang={this.state.lang}/>
+					}/>
+					<Route exact path="/contact" render={({history}) =>
+						<Contact lang={this.state.lang} history={history}/>
+					}/>
+					<Route exact path="/contact/success" lang={this.state.lang} render={() => 
+						<Success/>
+					}/>
+				</ColContainer>
 			);
 		} else {
 			return(
-				<Container>
+				<RowContainer>
 					<Col xs={5}>
 						<Sidebar/>
 					</Col>
@@ -76,7 +93,7 @@ export default class App extends React.Component {
 							<Success/>
 						}/>
 					</Col>
-				</Container>
+				</RowContainer>
 			);
 		}
 	}

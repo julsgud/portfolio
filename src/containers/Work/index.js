@@ -4,12 +4,19 @@ import styled from 'styled-components';
 import update from 'immutability-helper';
 import {ViewPager, Frame, Track, View} from 'react-view-pager';
 
+import media from 'styles';
+
 import json from './projects.json';
 import Project from 'components/Project'
 
-const Container = styled(Col)`
-	margin: 0;
-	margin-top: 50px;
+const WorkContainer = styled(Col)`
+	margin: 0 1.75em 2em 1.75em;
+
+	${media.medium`
+		margin-top: 3em;
+		margin-left: -2em;
+		marging-bottom: 0;
+	`};
 `;
 
 const carouselSettings = {
@@ -54,8 +61,8 @@ export default class Work extends React.Component {
 		} 
 
 		return(
-			<Container xs={11}>
-				<Row center="xs">
+			<Row center="xs">
+				<WorkContainer xs={12}>
 					<ViewPager>
 						<Frame>
 							<Track ref={c => this.track = c} viewsToShow={1} infinite>
@@ -67,8 +74,8 @@ export default class Work extends React.Component {
 						    <Arrow onClick={() => this.track.next()}> &#x2192; </Arrow>
 						</nav>
 					</ViewPager>
-				</Row>
-			</Container>
+				</WorkContainer>
+			</Row>
 		);
 	}
-}
+}	

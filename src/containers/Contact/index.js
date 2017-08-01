@@ -2,37 +2,57 @@ import React from 'react';
 import {Row, Col} from 'react-flexbox-grid';
 import styled from 'styled-components';
 
+import media from 'styles';
+
 import ContactForm from 'components/ContactForm';
 import IconLink from 'components/IconLink';
 
-const Container = styled(Col)`
-	margin-top: 50px;
+const ContactContainer = styled(Col)`
+	margin: 0 1.75em 2em 1.75em;
+	padding: 0;
+
+	${media.medium`
+		margin-top: 3em;
+		width: 80%;
+	`};
+
+	${media.large`
+		margin-top: 3em;
+		margin-left: -1em;
+		width: 80%;
+	`};
 `;
 
-const H1 = styled.h1`
+const Title = styled.div`
 	font-weight: 300;
-	font-size: 24px;
-	margin-top: 10px;
-	margin-bottom: 15px;
+	font-size: 1.5em;
+
+	${media.medium`
+		font-size: 1.2em;
+	`};
+
+	${media.large`
+		font-size: 1.5em;
+	`};
 `;
 
 const icon = styled.i`
-	font-size: 48px;
+	font-size: 3em;
 	font-weight: 300;
 	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
 `;
 
-const SocialMediaBar = styled(Row)`
-	margin: 12px;
+const SocialMediaRow = styled(Row)`
+	margin: 1em 1em 1em 1em;
+	padding: 0;
 `;
 
 const IconLinkStyled = styled(IconLink)`
-	margin-bottom: 4px;
 	font-weight: 400;
 	text-align: center;
-	font-size: 24px;
-	color: rgba(29,29,29,1);
+	font-size: 1.6em;
+	color: rgba(29,29,29,.95);
 	text-decoration: none;
 	&:hover {
 		color: rgba(122, 220, 220, 1);
@@ -41,6 +61,10 @@ const IconLinkStyled = styled(IconLink)`
 		text-decoration: underline;
 		color: rgba(251, 74, 35, 1);
 	};
+
+	${media.medium`
+		font-size: 1.5em;
+	`};
 `;
 
 export default class Contact extends React.Component {
@@ -57,9 +81,9 @@ export default class Contact extends React.Component {
 
 	render() {
 		return(
-			<Container xs={11}>
-				<H1> Let's connect... </H1>
-				<SocialMediaBar center="xs">
+			<ContactContainer xs={12}>
+				<Title> Let's connect! </Title>
+				<SocialMediaRow center="xs">
 					<Col xs={4}>
 						<IconLinkStyled link="https://github.com/julsgud" icon="github"/>
 					</Col>
@@ -69,9 +93,9 @@ export default class Contact extends React.Component {
 					<Col xs={4}>
 						<IconLinkStyled link="https://www.facebook.com/juls.gc" icon="facebook"/>
 					</Col>
-				</SocialMediaBar>
+				</SocialMediaRow>
 				<ContactForm emailHandler={this.sendEmail}/>
-			</Container>
+			</ContactContainer>
 		);
 	}
 }

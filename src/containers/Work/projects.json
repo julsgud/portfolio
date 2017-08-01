@@ -2,7 +2,7 @@
 	"projects": [
 		{
 			"title": "plasticsrev.club",
-			"description": "Web app for music project release",
+			"description": "Interactive Facebook Web App",
 			"collab": "",
 			"collabLink": "",
 			"tools": "React, Facebook API, Cloudinary, Kairos Facial Recognition API",
@@ -13,7 +13,7 @@
 		},
 		{
 			"title": "icanchase.github.io",
-			"description": "Web app for interactive Puzzle/Sequencer",
+			"description": "Interactive Puzzle/Sequencer",
 			"collab": "",
 			"collabLink": "",
 			"tools": "p5js, Youtube API",

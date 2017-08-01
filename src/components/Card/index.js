@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
-import Youtube from 'react-youtube';
+
+import media from 'styles';
 
 import TextLink from 'components/TextLink';
 
 const Container = styled(Col)`
 	text-align: left;
-	margin: 0 auto;
-	padding: 0;
-	max-width: 400px;
-	border-style: solid;
-	border-width: 0px;
+	margin: 0 1.75em 2em 1.75em;
+
+	${media.medium`
+		margin-bottom: 1em;
+	`};
 `;
 
 const CardContainer = ({children}) => {
@@ -22,16 +23,17 @@ const CardContainer = ({children}) => {
 	);
 }
 
-const Img = styled.img`
-	margin: 0;
-	margin-top: 6px;
-	width: 100%;
-`;
+let width;
 
-const opts = {
-	width: '400',
-	height: '200'
+if (window.innerWidth < 668) {
+	width = window.innerWidth - (16*3.5);
+} else {
+	width = window.innerWidth*.48;
 }
+
+const Img = styled.img`
+	width: ${width + "px"};
+`;
 
 const CardMedia = (props) => {
 	const {src, type} = props;
@@ -40,16 +42,14 @@ const CardMedia = (props) => {
 		const fullSrc = "https://www.youtube.com/embed/" + src + "?showinfo=0";
 		return(
 			<div className="container">
-				<iframe className="player" type="text/html" width="400" height="200" src={fullSrc} frameBorder="0" allowFullScreen/>
-				 {/*<Youtube videoId={props.mediaSrc} opts={opts}/>*/}
+				<iframe className="player" type="text/html" width={width} height="200" src={fullSrc} frameBorder="0" allowFullScreen/>
 			</div>
 		);
 	} else if (type == 'playlist') {
 		const fullSrc = "https://www.youtube.com/embed/" + src;
 		return(
 			<div className="container">
-				<iframe className="player" type="text/html" width="400" height="200" src={fullSrc} frameBorder="0" allowFullScreen/>
-				 {/*<Youtube videoId={props.mediaSrc} opts={opts}/>*/}
+				<iframe className="player" type="text/html" width={width} height="200" src={fullSrc} frameBorder="0" allowFullScreen/>
 			</div>
 		);
 	} else {
@@ -66,11 +66,19 @@ const CardTextContainer = styled(Col)`
 `;
 
 const Title = styled.div`
+	font-weight: 400;
+	font-size: 1.5em;
 	letter-spacing: 1px;
 	text-decoration: none;
 	color: rgba(29, 29, 29,1);
-	font-weight: 400;
-	font-size: 24px;
+
+	${media.medium`
+		font-size: 1.2em;
+	`};
+
+	${media.large`
+		font-size: 1.5em;
+	`};
 `;
 
 const CardTitle = (props) => {
@@ -81,13 +89,20 @@ const CardTitle = (props) => {
 
 const Subtitle = styled.div`
 	font-weight: 300;
-	font-size: 16px;
-	margin: 0;
-	margin-bottom: 10px;
+	font-size: 1.12em;
+	margin-bottom: .75em;
+
+	${media.medium`
+		font-size: .9em;
+	`};
+
+	${media.large`
+		font-size: 1.12em;
+	`};
 `;
 
 const HardRow = styled(Row)`
-	margin-left: 0px;
+	margin-left: 0;
 `;
 
 const CardSubtitle = (props) => {
@@ -107,10 +122,18 @@ const CardSubtitle = (props) => {
 }
 
 const Text = styled.div`
-	text-align: justify;
+	text-align: left;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: 1em;
 	margin: 0;
+
+	${media.medium`
+		font-size: .9em;
+	`};
+
+	${media.large`
+		font-size: 1em;
+	`};
 `;
 
 const CardPrimaryText = (props) => {
