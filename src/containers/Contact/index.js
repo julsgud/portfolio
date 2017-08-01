@@ -17,14 +17,14 @@ const Title = styled.div`
 `;
 
 const icon = styled.i`
-	font-size: 48px;
+	font-size: 3em;
 	font-weight: 300;
 	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
 `;
 
 const SocialMediaRow = styled(Row)`
-	margin: 1em;
+	margin: 0 1em 1em 1em;
 `;
 
 const IconLinkStyled = styled(IconLink)`
@@ -57,7 +57,7 @@ export default class Contact extends React.Component {
 	render() {
 		return(
 			<ContactContainer>
-				<Title> Let's connect... </Title>
+				<Title> Let's connect! </Title>
 				<SocialMediaRow center="xs">
 					<Col xs={4}>
 						<IconLinkStyled link="https://github.com/julsgud" icon="github"/>

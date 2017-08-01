@@ -18,7 +18,6 @@ const CardContainer = ({children}) => {
 }
 
 const width = window.innerWidth - (16*3.5);
-console.log(width);
 
 const Img = styled.img`
 	width: ${width + "px"};
