@@ -56,13 +56,6 @@ export default class Work extends React.Component {
 		}
 	}
 
-	componentDidMount() {
-		window.onresize = () => {
-			console.log('resize');
-			this.forceUpdate();
-		}
-	}
-
 	render() {
 		const projects = [];
 
@@ -77,7 +70,7 @@ export default class Work extends React.Component {
 				<WorkContainer xs={12}>
 					<ViewPager>
 						<Frame>
-							<Track ref={c => this.track = c} viewsToShow={1} infinite>
+							<Track ref={c => this.trxack = c} viewsToShow={1} infinite>
 								{projects}
 							</Track>
 						</Frame>
