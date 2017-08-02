@@ -12,6 +12,8 @@ const TextInput = styled(Text)`
 	letter-spacing: 1px;
 	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
+	box-sizing:border-box;
+    -moz-box-sizing:border-box;
 	margin-top: .5em;
 	margin-bottom: .5em;
 	border: .3px solid rgba(29, 29, 29, .3);
@@ -45,6 +47,8 @@ const TextArea = styled(Textarea)`
 	margin-top: .5em;
 	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
+	box-sizing:border-box;
+    -moz-box-sizing:border-box;
 	border: .3px solid rgba(29, 29, 29, .3);
 	border-radius: 5px;
 	resize: none;
