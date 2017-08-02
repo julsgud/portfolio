@@ -26,9 +26,10 @@ const CardContainer = ({children}) => {
 let width;
 
 if (window.innerWidth < 668) {
-	width = window.innerWidth - (16*3.5);
+	console.log('b');
+	width = window.innerWidth - (16*4.4);
 } else {
-	width = window.innerWidth*.48;
+	width = window.innerWidth*.5;
 }
 
 const Img = styled.img`

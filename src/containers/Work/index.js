@@ -56,6 +56,13 @@ export default class Work extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		window.onresize = () => {
+			console.log('resize');
+			this.forceUpdate();
+		}
+	}
+
 	render() {
 		const projects = [];
 
