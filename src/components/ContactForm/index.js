@@ -19,12 +19,12 @@ const TextInput = styled(Text)`
 
 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   		font-size: .8em;
-  		padding: 0 .25em;
+  		padding: .2em .25em;
   		color: rgba(29, 29, 29, .66);
 	}
 	::-moz-placeholder { /* Firefox 19+ */
   		font-size: .8em;
-  		padding: 0 .25em;
+  		padding: .2em .25em;
   		color: rgba(29, 29, 29, .66);	}
 
   	${media.medium`

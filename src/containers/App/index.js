@@ -12,7 +12,8 @@ import Header from 'components/Header';
 import Sidebar from 'components/Sidebar';
 
 const ColContainer = styled(Col)`
-	margin: 0;
+	margin: 0 auto;
+	max-width: 900;
 	padding: 0;
 	background-color: #fdfdfd;
 	color: rgba(29, 29, 29, 1);
@@ -21,7 +22,8 @@ const ColContainer = styled(Col)`
 `;
 
 const RowContainer = styled(Row)`
-	margin: 0;
+	max-width: 900px;
+	margin: 0 auto;
 	padding: 0;
 	background-color: #fdfdfd;
 	color: rgba(29, 29, 29, 1);
