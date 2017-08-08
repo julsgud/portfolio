@@ -1,28 +1,12 @@
 import React from 'react';
 import {Row, Col} from 'react-flexbox-grid';
-import styled, {keyframes} from 'styled-components';
 import update from 'immutability-helper';
 import {ViewPager, Frame, Track, View} from 'react-view-pager';
-import {fadeIn} from 'react-animations';
-
-import media from 'styles';
-
-import json from './projects.json';
 import Project from 'components/Project'
 
-const ani = keyframes`${fadeIn}`;
+import {WorkContainer, Arrow} from './unique-components';
 
-const WorkContainer = styled(Col)`
-	margin: 0 1.75em 2em 1.75em;
-
-	${media.medium`
-		margin-top: 3em;
-		margin-left: -2em;
-		marging-bottom: 0;
-	`};
-
-	animation: 1.5s ${ani};
-`;
+import json from './projects.json';
 
 const carouselSettings = {
 	dots: true,
@@ -32,12 +16,9 @@ const carouselSettings = {
 	slidesToScroll: 1
 }
 
-const Arrow = styled.a`
-	color: rgba(29, 29, 29, .85d);
-	font-size: 3em;
-	cursor: pointer;
-	cursor: hand;
-`;
+// Work Component
+// Passes project info from JSON to Project Component
+// and renders as a carousel using react-view-pager
 
 export default class Work extends React.Component {
 	constructor(props) {

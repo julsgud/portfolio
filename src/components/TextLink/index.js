@@ -5,7 +5,7 @@ import media from 'styles';
 
 const A = styled.a`
 	font-weight: 300;
-	font-size: 1.12em;
+	font-size: .8em;
 	color: rgba(29, 29, 29, 1);
 	margin: 0;
 	margin-left: 8px;
