@@ -7,11 +7,10 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
-	{from: 'src/404.html', to: 'dist/404.html'},
-	{from: 'src/sitemap.html', to: 'dist/sitemap.html'},
-	{from: 'src/sitemap.xml', to: 'dist/sitemap.xml'},
-	{from: 'src/robots.txt', to: 'dist/robots.txt'}
-}
+	{from: 'src/404.html'},
+	{from: 'src/sitemap.html'},
+	{from: 'src/sitemap.xml'},
+	{from: 'src/robots.txt'}
 ]);
 
 module.exports = {
@@ -22,13 +21,13 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-		{test: /\.js$/, loader: ['babel-loader', 'eslint-loader'], exclude: /node_modules/},
-		{test: /\.css$/, loader: 'style-loader!css-loader?modules', include: /flexboxgrid/}
+			{test: /\.js$/, loader: ['babel-loader', 'eslint-loader'], exclude: /node_modules/},
+			{test: /\.css$/, loader: 'style-loader!css-loader?modules', include: /flexboxgrid/}
 		]
 	},
 	plugins: [
-		[HtmlWebpackPluginConfig],
-		[CopyWebpackPluginConfig]
+		HtmlWebpackPluginConfig,
+		CopyWebpackPluginConfig
 	],
 	resolve: {
 		modules: [
