@@ -15,7 +15,7 @@ const ColContainer = styled(Col)`
 	margin: 0 auto;
 	max-width: 900;
 	padding: 0;
-	background-color: #fdfdfd;
+	background-color: #fff;
 	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
 	font-size: 16px;
@@ -25,7 +25,7 @@ const RowContainer = styled(Row)`
 	max-width: 900px;
 	margin: 0 auto;
 	padding: 0;
-	background-color: #fdfdfd;
+	background-color: #fff;
 	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
 	font-size: 16px;

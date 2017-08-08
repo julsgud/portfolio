@@ -140,7 +140,7 @@ const Text = styled.div`
 
 const CardPrimaryText = (props) => {
 	return(
-		<Text> <b>Tools:</b> {props.text} </Text>
+		<Text style={{marginBottom: '.75em'}}> <b>Tools:</b> {props.text} </Text>
 	);
 }
 const CardSecondaryText = (props) => {

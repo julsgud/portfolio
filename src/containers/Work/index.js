@@ -33,7 +33,8 @@ const carouselSettings = {
 }
 
 const Arrow = styled.a`
-	font-size: 32px;
+	color: rgba(29, 29, 29, .85d);
+	font-size: 3em;
 	cursor: pointer;
 	cursor: hand;
 `;

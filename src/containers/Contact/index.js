@@ -41,11 +41,48 @@ const Title = styled.div`
 	animation: 1.5s ${ani};
 `;
 
-const icon = styled.i`
-	font-size: 3em;
+const Subtitle = styled.div`
+	font-weight: 300;
+	font-size: 1em;
+
+	${media.medium`
+		font-size: .8em;
+	`};
+
+	${media.large`
+		font-size: 1em;
+	`};
+`;
+
+const icon = styled.p`
+	font-size: 4em;
 	font-weight: 300;
 	color: rgba(29, 29, 29, 1);
 	font-family: 'Roboto Mono', monospace;
+`;
+
+const LinkContactRow = styled.a`
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	font-size: 1em;
+	margin: 1em 1em 1em 0;
+	padding: 0;
+	color: rgba(29, 29, 29, .95);
+	text-decoration: none;
+	cursor: pointer;
+	cursor: hand;
+
+	&:hover {
+		color: rgba(122, 220, 220, 1);
+	};
+`;
+
+const ContactRow = styled(Row)`
+	font-size: 1em;
+	margin: 1em 1em 1em 0;
+	padding: 0;
 `;
 
 const SocialMediaRow = styled(Row)`
@@ -55,8 +92,7 @@ const SocialMediaRow = styled(Row)`
 
 const IconLinkStyled = styled(IconLink)`
 	font-weight: 400;
-	text-align: center;
-	font-size: 1.6em;
+	font-size: 1.2em;
 	color: rgba(29,29,29,.95);
 	text-decoration: none;
 	&:hover {
@@ -68,7 +104,7 @@ const IconLinkStyled = styled(IconLink)`
 	};
 
 	${media.medium`
-		font-size: 1.5em;
+		font-size: 1em;
 	`};
 `;
 
@@ -80,25 +116,46 @@ export default class Contact extends React.Component {
 	}
 
 	sendEmail(data) {
-		// window.emailjs.send("gmail", "basic", data);
+		window.emailjs.send("gmail", "basic", data);
 		this.props.history.push("contact/success");
 	}
 
 	render() {
 		return(
 			<ContactContainer xs={12}>
-				<Title> Let's connect! </Title>
-				<SocialMediaRow center="xs">
-					<Col xs={4}>
-						<IconLinkStyled link="https://github.com/julsgud" icon="github"/>
+				<Title> Let's connect... </Title>
+				<ContactRow start='xs'>
+					<Col xs={1} style={{padding: 0}}>
+						<i className="fa fa-envelope" aria-hidden="true"></i>
 					</Col>
-					<Col xs={4}>
-						<IconLinkStyled link="https://www.instagram.com/iccdragons/" icon="instagram"/>
+					<Col xs={11} style={{padding: 0}}>
+						<Subtitle>julsgud@gmail.com </Subtitle>
 					</Col>
-					<Col xs={4}>
-						<IconLinkStyled link="https://www.facebook.com/juls.gc" icon="facebook"/>
+				</ContactRow>
+				<ContactRow>
+					<Col xs={1} style={{padding: 0}}>
+						<i className="fa fa-phone" aria-hidden="true"></i>
 					</Col>
-				</SocialMediaRow>
+					<Col xs={11} style={{padding: 0}}>
+						<Subtitle>+52155-1291-3782 </Subtitle>
+					</Col>
+				</ContactRow>
+				<LinkContactRow href="https://github.com/julsgud">
+					<Col xs={1} style={{padding: 0, fontSize: '1.2em'}}>
+						<i className="fa fa-github" aria-hidden="true"></i>
+					</Col>
+					<Col xs={11} style={{padding: 0, margin: 'auto 0'}}>
+						<Subtitle>julsgud </Subtitle>
+					</Col>
+				</LinkContactRow>
+				<LinkContactRow href="https://www.instagram.com/iccdragons/">
+					<Col xs={1} style={{padding: 0, fontSize: '1.2em'}}>
+						<i className="fa fa-instagram" aria-hidden="true"></i>
+					</Col>
+					<Col xs={11} style={{padding: 0, margin: 'auto 0'}}>
+						<Subtitle> @iccdragons </Subtitle>
+					</Col>
+				</LinkContactRow>
 				<ContactForm emailHandler={this.sendEmail}/>
 			</ContactContainer>
 		);
