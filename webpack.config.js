@@ -5,6 +5,13 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 	filename: 'index.html',
 	inject: 'body'
 });
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([
+	{from: 'src/404.html'},
+	{from: 'src/sitemap.html'},
+	{from: 'src/sitemap.xml'},
+	{from: 'src/robots.txt'}
+]);
 
 module.exports = {
 	entry: './src/index.js',
@@ -14,11 +21,14 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-		{test: /\.js$/, loader: ['babel-loader', 'eslint-loader'], exclude: /node_modules/},
-		{test: /\.css$/, loader: 'style-loader!css-loader?modules', include: /flexboxgrid/}
+			{test: /\.js$/, loader: ['babel-loader', 'eslint-loader'], exclude: /node_modules/},
+			{test: /\.css$/, loader: 'style-loader!css-loader?modules', include: /flexboxgrid/}
 		]
 	},
-	plugins: [HtmlWebpackPluginConfig],
+	plugins: [
+		HtmlWebpackPluginConfig,
+		CopyWebpackPluginConfig
+	],
 	resolve: {
 		modules: [
 			path.resolve('./src'),
