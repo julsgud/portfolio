@@ -16,14 +16,15 @@ export default class App extends React.Component {
 		super();
 
 		this.state = {
-			lang: 'ES'
+			lang: 'EN'
 		}
 	}
 
 	// Init email.js client for Contact Component
-	componentWillMount() {
-		window.emailjs.init("user_ivBQ7HFvKfldMbtGxGbBt");
-	}
+	// Deferred to Contact component for faster page load
+	// componentWillMount() {
+	// 	window.emailjs.init("user_ivBQ7HFvKfldMbtGxGbBt");
+	// }
 
 	// Trigger render on resize to adjust layout
 	componentDidMount() {

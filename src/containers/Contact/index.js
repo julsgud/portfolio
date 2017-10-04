@@ -12,6 +12,10 @@ export default class Contact extends React.Component {
 		this.sendEmail = this.sendEmail.bind(this);
 	}
 
+	componentDidMount() {
+		window.emailjs.init("user_ivBQ7HFvKfldMbtGxGbBt");
+	}
+
 	sendEmail(data) {
 		window.emailjs.send("gmail", "basic", data);
 		this.props.history.push("contact/success");
