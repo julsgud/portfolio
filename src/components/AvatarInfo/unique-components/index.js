@@ -101,7 +101,7 @@ const PillLink = styled(NavLink)`
 const Divider = styled.div`
 	margin: 0;
 	padding: 0;
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 1em;
 `;
 

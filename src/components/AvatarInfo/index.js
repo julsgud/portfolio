@@ -18,7 +18,7 @@ export default class AvatarInfo extends React.Component {
 			<Row center="xs">
 				<AvatarNavContainer xs={8}>
 					<Row center="xs">
-						<Img src="https://res.cloudinary.com/julsgc/image/upload/v1499787752/ICCD_B-52_b2bzpt_Cropped_ktaijn.jpg"></Img>
+						<Img src="https://res.cloudinary.com/julsgc/image/upload/v1507140229/juls.jpg"></Img>
 					</Row>
 					<Row center="xs">
 						<Name> Julio Gudiño </Name>
