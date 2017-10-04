@@ -57,8 +57,9 @@ export default class Work extends React.Component {
 							</Track>
 						</Frame>
 						<nav className="pager-controls">
-						    <Arrow onClick={() => this.track.prev()}> &#x2190; </Arrow>
-						    <Arrow onClick={() => this.track.next()}> &#x2192; </Arrow>
+						    <Arrow onClick={() => this.track.prev()}> <i className="fa fa-long-arrow-left" aria-hidden="true"></i> </Arrow>
+						    <Arrow onClick={() => this.track.next()}> <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+ </Arrow>
 						</nav>
 					</ViewPager>
 				</WorkContainer>

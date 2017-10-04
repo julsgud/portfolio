@@ -1,8 +1,11 @@
 import {NavLink} from 'react-router-dom';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
+import {fadeInLeft} from 'react-animations';
 
 import media from 'styles/';
+
+const ani = keyframes`${fadeInLeft}`;
 
 const AvatarNavContainer = styled(Col)`
 	margin-top: 1.5em;
@@ -11,6 +14,8 @@ const AvatarNavContainer = styled(Col)`
 		margin-top: 3em;
 		margin-left: -2em;
 	`}
+
+	animation: 1.5s ${ani};
 `;
 
 const Img = styled.img`
