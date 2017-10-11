@@ -16,7 +16,7 @@ export default class App extends React.Component {
 		super();
 
 		this.state = {
-			lang: 'EN'
+			lang: 'ES'
 		}
 	}
 
@@ -34,6 +34,7 @@ export default class App extends React.Component {
 	}
 
 	render() {
+		// mobile
 		if (window.innerWidth < 668) {
 			return(
 				<ColContainer>
@@ -51,6 +52,7 @@ export default class App extends React.Component {
 					}/>
 				</ColContainer>
 			);
+		// desktop
 		} else {
 			return(
 				<RowContainer>
