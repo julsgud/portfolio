@@ -2,7 +2,7 @@ import React from 'react';
 
 import TextLink from 'components/TextLink';
 
-import {Container, Img, CardTextContainer, Title, Subtitle, HardRow, Text} from './unique-components';
+import {Container, Img, CardTextContainer, Title, Subtitle, HardRow, Text} from './Card.styles';
 
 let width;
 
