@@ -2,7 +2,7 @@ import React from 'react';
 import {Route} from 'react-router-dom';
 import {Row, Col} from 'react-flexbox-grid';
 
-import About from 'containers/About';
+import {About} from '../About/About';
 import Work from 'containers/Work';
 import Contact from 'containers/Contact';
 import Success from 'containers/Success';

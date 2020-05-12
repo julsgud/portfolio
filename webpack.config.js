@@ -14,7 +14,7 @@ const CopyWebpackPluginConfig = new CopyWebpackPlugin([
 ]);
 
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/About.jsx',
 	output: {
 		path: path.resolve('dist'),
 		filename:'index_bundle.js'

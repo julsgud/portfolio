@@ -1,12 +1,11 @@
 import React from 'react';
 import {Row, Col} from 'react-flexbox-grid';
 
-import {AboutContainer, RedTitle, Description} from './unique-components';
+import {AboutContainer, RedTitle, Description} from './About.styles';
 
-// About Component
-// Simple description, appears as default route
 
-export default class About extends React.Component {
+
+export  class About extends React.Component {
 	render() {
 		return(
 			<Row>

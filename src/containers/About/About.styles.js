@@ -2,7 +2,7 @@ import {Col} from 'react-flexbox-grid';
 import styled, {keyframes} from 'styled-components';
 import {fadeInDown} from 'react-animations';
 
-import media from 'styles';
+import media from 'src/styles';
 
 const ani = keyframes`${fadeInDown}`;
 
