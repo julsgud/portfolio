@@ -3,7 +3,7 @@ import styled, {keyframes} from 'styled-components';
 import {Row, Col} from 'react-flexbox-grid';
 import {fadeInLeft} from 'react-animations';
 
-import media from 'styles/';
+import media from '../../styles/';
 
 const ani = keyframes`${fadeInLeft}`;
 
