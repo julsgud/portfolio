@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Row, Col } from "react-flexbox-grid"
-import media from "../../styles"
+import { media } from "../../styles"
 
 let width
 
