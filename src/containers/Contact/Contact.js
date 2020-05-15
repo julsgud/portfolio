@@ -1,4 +1,5 @@
 import React from "react"
+import {Row} from "react-flexbox-grid"
 import {
   ContactContainer,
   Title,
@@ -13,22 +14,6 @@ export const Contact = () => {
   return (
     <ContactContainer xs={12}>
       <Title> Let's connect... </Title>
-      <LinkContactRow href="https://github.com/julsgud" target="_blank">
-        <Icon xs={1}>
-          <i className="fa fa-github" aria-hidden="true"></i>
-        </Icon>
-        <Info xs={11}>
-          <Subtitle> julsgud </Subtitle>
-        </Info>
-      </LinkContactRow>
-      <LinkContactRow href="https://www.instagram.com/julsgud/" target="_blank">
-        <Icon xs={1}>
-          <i className="fa fa-instagram" aria-hidden="true"></i>
-        </Icon>
-        <Info xs={11}>
-          <Subtitle> @iccdragons </Subtitle>
-        </Info>
-      </LinkContactRow>
       <ContactRow>
         <Icon xs={1}>
           <i className="fa fa-phone" aria-hidden="true"></i>

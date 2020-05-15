@@ -22,7 +22,7 @@ const ContactContainer = styled(Col)`
 `
 
 const Title = styled.div`
-  font-weight: 300;
+  font-weight: 700;
   font-size: 1.5em;
 
   ${media.medium`
@@ -75,7 +75,7 @@ const LinkContactRow = styled.a`
   cursor: hand;
 
   &:hover {
-    color: rgba(122, 220, 220, 1);
+    color: #bc5556;
   }
 `
 

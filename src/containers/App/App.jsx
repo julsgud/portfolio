@@ -25,24 +25,8 @@ export class App extends React.Component {
           <AvatarInfo />
           <HR />
           <Route exact path="/" component={About} />
-          <Route
-            exact
-            path="/work"
-            render={() => <Work lang={this.state.lang} />}
-          />
-          <Route
-            exact
-            path="/contact"
-            render={({ history }) => (
-              <Contact lang={this.state.lang} history={history} />
-            )}
-          />
-          <Route
-            exact
-            path="/contact/success"
-            lang={this.state.lang}
-            render={() => <Success />}
-          />
+          <Route exact path="/work" component={Work} />
+          <Route exact path="/contact" component={Contact} />
         </ColContainer>
       )
       // desktop
@@ -54,18 +38,8 @@ export class App extends React.Component {
           </Col>
           <Col xs={7}>
             <Route exact path="/" component={About} />
-            <Route
-              exact
-              path="/work"
-              render={() => <Work lang={this.state.lang} />}
-            />
-            <Route
-              exact
-              path="/contact"
-              render={({ history }) => (
-                <Contact lang={this.state.lang} history={history} />
-              )}
-            />
+            <Route exact path="/work" component={Work} />
+            <Route exact path="/contact" component={Contact} />
           </Col>
         </RowContainer>
       )

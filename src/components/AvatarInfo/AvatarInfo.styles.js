@@ -1,11 +1,15 @@
 import { NavLink } from "react-router-dom"
-import styled, { keyframes } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 import { Row, Col } from "react-flexbox-grid"
 import { fadeInLeft } from "react-animations"
 
 import { media } from "../../styles"
 
 const ani = keyframes`${fadeInLeft}`
+
+export const orangeCss = css`
+  color: #bc5556;
+`
 
 const AvatarNavContainer = styled(Col)`
 	margin-top: 1.5em;
@@ -19,12 +23,13 @@ const AvatarNavContainer = styled(Col)`
 `
 
 const Img = styled.img`
+  border-radius: 5%;
   width: 90%;
   height: 90%;
 
   ${media.medium`
-		max-width: 200px;
-		max-height: 200px;
+		max-width: 280px;
+		max-height: 280px;
 	`}
 `
 
@@ -42,7 +47,7 @@ const Name = styled.div`
 
   ${media.large`
 		font-size: 1.5em;
-		letter-spacing: .11em;
+		letter-spacing: .1em;
 	`}
 `
 
@@ -65,7 +70,7 @@ const Title = styled.div`
 `
 
 const BlueTitle = styled(Title)`
-  color: rgba(122, 220, 220, 1);
+  color: rgba(255, 190, 124, 1);
   margin-right: 1.3em;
 `
 
@@ -79,19 +84,19 @@ const NavBar = styled(Row)`
 	`}
 
   ${media.large`
-		font-size: 1em;
 		max-width: 200px;
 	`}
 `
 
 const PillLink = styled(NavLink)`
   font-weight: 400;
-  font-size: 1em;
   color: rgba(29, 29, 29, 1);
   text-decoration: none;
+  
   &:hover {
-    color: rgba(122, 220, 220, 1);
+    ${orangeCss}
   }
+  
   &:active {
     text-decoration: underline;
     color: rgba(251, 74, 35, 1);
