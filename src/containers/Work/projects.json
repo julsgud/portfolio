@@ -2,11 +2,11 @@
 	"projects": [
 		{
 			"title": "plasticsrev.club",
-			"description": "Interactive Facebook Web App",
+			"description": "Canvas Image Processing",
 			"collab": "",
 			"collabLink": "",
-			"tools": "HTML5, CSS3, Javascript ES6, Babel, Webpack 2, Yarn, NodeJS, HTML Canvas, ReactJS, Facebook API, Kairos API, Cloudinary SDK",
-			"technicalTwist": "Get user images from FB, analyze for facial recognition, create artwork using images and FR info. Save images and share to FB.",
+			"tools": "Canvas, React, Cloudinary, Kairos and Facebook APIs",
+			"technicalTwist": "Canvas-based image processing using facial recognition data from user's facebook profile image.",
 			"mediaType": "image",
 			"mediaSrc": "https://res.cloudinary.com/julsgc/image/upload/v1494274636/banner_title.png",
 			"link": "https://julsgud.github.io/tpr-vonvon"
@@ -16,8 +16,8 @@
 			"description": "Interactive Puzzle/Sequencer",
 			"collab": "",
 			"collabLink": "",
-			"tools": "HTML5, CSS3, Javascript ES6, Babel, Webpack 2, NodeJS, NPM, HTML Canvas, P5JS",
-			"technicalTwist": "Clean and simple UI that requires no textual instructions.",
+			"tools": "P5.js, Canvas, Web Audio API",
+			"technicalTwist": "Image and sound interaction into game pattern",
 			"mediaType": "image",
 			"mediaSrc": "https://res.cloudinary.com/julsgc/image/upload/v1501209473/icanchase.png",
 			"link": "https://icanchase.github.io"
@@ -26,9 +26,9 @@
 			"title": "ICCD - Ciclos",
 			"description": "Video + Editing by",
 			"collab": "Pamela Hersch",
-			"collabLink": "https://www.instagram.com/pamelahersch/",
-			"tools": "Processing, Final Cut Pro X",
-			"technicalTwist": "Convey concept of entropy through font and video footage processing. Use live videos of dancer/singer through custom filters to create interaction with a digital, dreamy aesthetic.",
+			"collabLink": "https://www.instagram.com/herschvisuals/",
+			"tools": "Processing (Java)",
+			"technicalTwist": "Type and video processing through original code.",
 			"mediaType": "video",
 			"mediaSrc": "RrseXU2n93I",
 			"link": ""	
@@ -39,7 +39,7 @@
 			"collab": "",
 			"collabLink": "",
 			"tools": "Max/MSP/Jitter, Open Sound Control, Ableton Live, Max for Live",
-			"technicalTwist": "Building modules (LFOs, Envelopes, etc) from scratch. Control visual system from Ableton Live using OSC protocol and original Max for Live devices.",
+			"technicalTwist": "Performance system communicating two pieces of software through real-time audio/midi data.",
 			"mediaType": "video",
 			"mediaSrc": "cFZ3eIo9-WU",
 			"link": ""
@@ -49,43 +49,11 @@
 			"description": "Graphic Design by",
 			"collab": "Julio Derbez",
 			"collabLink": "https://www.instagram.com/pixelfeliz/",
-			"tools": "Processing, Final Cut Pro X",
-			"technicalTwist": "Digital content creation out of static designs to preview each single off the album.",
+			"tools": "Processing (Java)",
+			"technicalTwist": "Animation through code.",
 			"mediaType": "playlist",
 			"mediaSrc": "videoseries?list=PLRNxsSxLO3yEYPUODyQdb92rNbQsbd69W",
 			"link": ""
-		}
-	],
-	"proyectos": [
-		{
-			"título": "Plasticsrev.club",
-			"descripción": "Aplicación web de promoción de lanzamiento de música",
-			"herramientas": "React, Facebook API, Cloudinary, Kairos Detección Facial API",
-			"reto técnico": "Extraer imágenes de perfil de FB, analizar para detección de caras, crear arte con imágenes e información sobre caras. Salvar imágenes y compartir en FB."
-		},
-		{
-			"título": "Lanzamiento de 'Fauna' de I Can Chase Dragons",
-			"descripción": "Rompezabezas/Secuenciador que revela el sencillo + remixes al completarse",
-			"herramientas": "P5JS, Youtube API",
-			"reto técnico": "Interfaz limpia y sencilla que no requiere instrucciones textuales. Concepto de juego que ejemplifica el orden/desorden como tema del álbum."
-		},
-		{
-			"título": "Lyric video para 'Ciclos' de I Can Chase Dragons",
-			"descripción": "Creado con Pamela Hersch (Cámara y Edición)",
-			"herramientas": "Processing",
-			"reto técnico": "Representar concepto de entropía a través de la tipografía y la estética del video procesado. Transformar videos de bailarina/cantante con filtros y código original de Processing para crear una interacción entre el personaje y un espacio digital."
-		},
-		{
-			"título": "Texturas Modulares",
-			"descripción": "Sistema de ejecución en vivo que aplica imágenes cargadas por el usuario a figuras geométricas para crear visuales para un set de Ableton Live",
-			"herramientas": "Max for Live, Max/MSP/Jitter, OSC",
-			"reto técnico": "Construir modulos (LFO, Envelopes) desde el comienzo. Controlar el sistema visual desde Ableton Live usando OSC y objetos de Max For Live originales."
-		},
-		{
-			"título": "Set de Videos Promocionales para Entropía de ICCD",
-			"descripción": "Creado con Julio Derbez (Diseño Gráfico)",
-			"herramientas": "Processing, Final Cut X",
-			"reto técnico": "Creación de contenido digital a partir de diseños estáticos para cada sencillo del álbum"
 		}
 	]
 }

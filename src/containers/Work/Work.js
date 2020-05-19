@@ -3,7 +3,7 @@ import { Row } from "react-flexbox-grid"
 import { ViewPager, Frame, Track, View } from "react-view-pager"
 
 import { Project } from "../../components/Project/Project"
-import { WorkContainer, Arrow } from "./Work.styles"
+import {WorkContainer, Arrow, Icon} from "./Work.styles"
 import json from "./projects.json"
 
 export const Work = () => {
@@ -24,11 +24,11 @@ export const Work = () => {
             </Track>
           </Frame>
           <nav className="pager-controls">
-            <Arrow onClick={() => track.prev()}>
-              <i className="fa fa-long-arrow-left" aria-hidden="true" />
+            <Arrow onClick={() => track.current.prev()}>
+              <Icon className="fa fa-long-arrow-left" aria-hidden="true" />
             </Arrow>
-            <Arrow onClick={() => track.next()}>
-              <i className="fa fa-long-arrow-right" aria-hidden="true" />
+            <Arrow onClick={() => track.current.next()}>
+              <Icon className="fa fa-long-arrow-right" aria-hidden="true" />
             </Arrow>
           </nav>
         </ViewPager>

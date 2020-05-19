@@ -30,33 +30,17 @@ const CardTextContainer = styled(Col)`
 `
 
 const Title = styled.div`
-  font-weight: 400;
-  font-size: 1.2em;
+  font-weight: 600;
+  font-size: 24px;
   letter-spacing: 1px;
   text-decoration: none;
   color: rgba(29, 29, 29, 1);
-
-  ${media.medium`
-		font-size: 1.2em;
-	`};
-
-  ${media.large`
-		font-size: 1.5em;
-	`};
 `
 
 const Subtitle = styled.div`
   font-weight: 300;
-  font-size: 0.8em;
-  margin-bottom: 0.75em;
-
-  ${media.medium`
-		font-size: .9em;
-	`};
-
-  ${media.large`
-		font-size: 1.12em;
-	`};
+  font-size: 16px;
+  margin-bottom: 24px;
 `
 
 const HardRow = styled(Row)`
