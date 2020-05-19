@@ -63,5 +63,11 @@ export const Icon = styled(Col)`
   font-weight: 300;
   padding: 0;
   color: rgba(29, 29, 29, 1);
+  
+  &:hover {
+    color: #bc5556;
+  }
+  
+  transition: all 0.3s ease-in-out;
 `
 
