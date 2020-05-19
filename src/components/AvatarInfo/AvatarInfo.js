@@ -20,7 +20,7 @@ const activeLinkStyle = {
 export const AvatarInfo = () => {
   return (
     <Row center="xs">
-      <AvatarNavContainer xs={10}>
+      <AvatarNavContainer xs={12}>
         <Row center="xs">
           <Img src="https://res.cloudinary.com/julsgc/image/upload/v1589414607/ICCD_B-21_lw6mqt.jpg"></Img>
         </Row>
@@ -30,6 +30,15 @@ export const AvatarInfo = () => {
         <Row center="xs">
           <Title> Software Engineer </Title>
         </Row>
+        <NavBar around="xs" center="xs">
+          <PillLink to="/" exact activeStyle={activeLinkStyle}>
+            About
+          </PillLink>
+          <Divider> | </Divider>
+          <PillLink to="/work" activeStyle={activeLinkStyle}>
+            Work
+          </PillLink>
+        </NavBar>
         <Row center="xs">
           <LinkContactRow href="https://github.com/julsgud" target="_blank">
             <Icon xs={1}>
@@ -47,15 +56,7 @@ export const AvatarInfo = () => {
             </Icon>
           </LinkContactRow>
         </Row>
-        <NavBar around="xs" center="xs">
-          <PillLink to="/" exact activeStyle={activeLinkStyle}>
-            About
-          </PillLink>
-          <Divider> | </Divider>
-          <PillLink to="/work" activeStyle={activeLinkStyle}>
-            Work
-          </PillLink>
-        </NavBar>
+
       </AvatarNavContainer>
     </Row>
   )

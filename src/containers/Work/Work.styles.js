@@ -6,13 +6,7 @@ import { media } from "../../styles"
 const ani = keyframes`${fadeIn}`
 
 const WorkContainer = styled(Col)`
-  margin: 0 1.75em 2em 1.75em;
-
-  ${media.medium`
-		margin-top: 3em;
-		margin-left: -2em;
-		marging-bottom: 0;
-	`};
+  margin-top: 72px;
 
   animation: 1.5s ${ani};
 `

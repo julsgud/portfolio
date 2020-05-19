@@ -32,8 +32,8 @@ export class App extends React.Component {
       // desktop
     } else {
       return (
-        <RowContainer>
-          <Col xs={5}>
+        <RowContainer between="xs">
+          <Col xs={4}>
             <AvatarInfo />
           </Col>
           <Col xs={7}>

@@ -7,11 +7,8 @@ import { media } from "../../styles"
 const ani = keyframes`${fadeInDown}`
 
 export const AboutContainer = styled(Col)`
-  margin: 0 1.75em 2em 1.75em;
-
   ${media.medium`
-		margin-top: 4em;
-		margin-left: -2em;
+		margin-top: 72px;
 	`};
 `
 
