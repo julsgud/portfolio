@@ -1,7 +1,12 @@
 import React from "react"
 import { Row, Col } from "react-flexbox-grid"
 
-import { AboutContainer, RedTitle, Description } from "./About.styles"
+import {
+  AboutContainer,
+  RedTitle,
+  Description,
+  StyledLink,
+} from "./About.styles"
 
 const Bio = `
   I'm a developer from 🇲🇽 MX City. I'm all about building digital tools, multimedia art and experiences. 
@@ -14,13 +19,13 @@ export const About = () => {
     <Row>
       <AboutContainer>
         <Col xs={12}>
-          <RedTitle> Hey!</RedTitle>
+          <RedTitle> Hey! </RedTitle>
         </Col>
         <Col xs={12}>
+          <Description>{Bio}</Description>
           <Description>
-            {Bio}
+            <StyledLink to="work"> Check out my work! </StyledLink>
           </Description>
-          <Description> Check out my work! </Description>
         </Col>
       </AboutContainer>
     </Row>

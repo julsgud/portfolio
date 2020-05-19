@@ -4,7 +4,6 @@ import { Col } from "react-flexbox-grid"
 
 import { About } from "../About/About"
 import { Work } from "../Work/Work"
-import { Contact } from "../Contact/Contact"
 
 import { AvatarInfo } from "../../components/AvatarInfo/AvatarInfo"
 
@@ -26,7 +25,6 @@ export class App extends React.Component {
           <HR />
           <Route exact path="/" component={About} />
           <Route exact path="/work" component={Work} />
-          <Route exact path="/contact" component={Contact} />
         </ColContainer>
       )
       // desktop
@@ -39,7 +37,6 @@ export class App extends React.Component {
           <Col xs={7}>
             <Route exact path="/" component={About} />
             <Route exact path="/work" component={Work} />
-            <Route exact path="/contact" component={Contact} />
           </Col>
         </RowContainer>
       )

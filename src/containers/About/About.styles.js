@@ -1,6 +1,7 @@
 import { Col } from "react-flexbox-grid"
 import styled, { keyframes } from "styled-components"
 import { fadeInDown } from "react-animations"
+import { Link } from "react-router-dom"
 
 import { media } from "../../styles"
 
@@ -25,4 +26,8 @@ export const Description = styled.p`
   font-size: 1em;
   letter-spacing: 0.2px;
   text-align: left;
+`
+
+export const StyledLink = styled(Link)`
+  color: #333;
 `
