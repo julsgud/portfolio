@@ -40,3 +40,28 @@ export const StyledLink = styled(Link)`
   color: #333;
 `
 
+export const LinkContactRow = styled.a`
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  font-size: 1em;
+  margin: 1em 1em 1em 0;
+  padding: 0;
+  color: rgba(29, 29, 29, 0.95);
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+
+  &:hover {
+    color: #bc5556;
+  }
+`
+
+export const Icon = styled(Col)`
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: 0;
+  color: rgba(29, 29, 29, 1);
+`
+

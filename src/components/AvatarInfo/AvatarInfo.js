@@ -1,9 +1,7 @@
 import React from "react"
 import { Row } from "react-flexbox-grid"
-import { Link } from "react-router-dom"
 
-import { AvatarNavContainer, Img, Name, Title, StyledLink } from "./AvatarInfo.styles"
-import { Icon, LinkContactRow } from "../../containers/Contact/Contact.styles"
+import { AvatarNavContainer, Img, Name, Title, StyledLink, Icon, LinkContactRow } from "./AvatarInfo.styles"
 
 export const AvatarInfo = () => {
   return (
