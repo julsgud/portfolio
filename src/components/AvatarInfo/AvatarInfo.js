@@ -48,6 +48,14 @@ export const AvatarInfo = () => {
             <i className="fa fa-linkedin" aria-hidden="true"></i>
           </Icon>
         </LinkContactRow>
+        <LinkContactRow
+          href="https://medium.com/@julsgud"
+          target="_blank"
+        >
+          <Icon xs={1}>
+            <i className="fa fa-medium" aria-hidden="true"></i>
+          </Icon>
+        </LinkContactRow>
       </Row>
     </AvatarContainer>
   )
