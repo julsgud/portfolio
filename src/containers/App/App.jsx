@@ -7,7 +7,7 @@ import { Work } from "../Work/Work"
 
 import { AvatarInfo } from "../../components/AvatarInfo/AvatarInfo"
 
-import { ColContainer, RowContainer, HR } from "./App.styles"
+import { ColContainer, Content, RowContainer, HR, DesktopContainer } from "./App.styles"
 
 export class App extends React.Component {
   componentDidMount() {
@@ -30,15 +30,13 @@ export class App extends React.Component {
       // desktop
     } else {
       return (
-        <RowContainer between="xs">
-          <Col xs={4}>
-            <AvatarInfo />
-          </Col>
-          <Col xs={7}>
+        <DesktopContainer>
+          <AvatarInfo />
+          <React.Fragment>
             <Route exact path="/" component={About} />
             <Route exact path="/work" component={Work} />
-          </Col>
-        </RowContainer>
+          </React.Fragment>
+        </DesktopContainer>
       )
     }
   }

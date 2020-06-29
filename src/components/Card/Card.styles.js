@@ -14,11 +14,8 @@ if (window.innerWidth < 668) {
 
 const Container = styled(Col)`
   text-align: left;
-  margin: 0 1.75em 2em 1.75em;
-
-  ${media.medium`
-		margin-bottom: 1em;
-	`};
+  margin-bottom: 48px;
+  max-width: 450px;
 `
 
 const Img = styled.img`

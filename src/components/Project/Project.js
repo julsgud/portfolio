@@ -3,18 +3,20 @@ import React from "react"
 import {
   CardContainer,
   CardMedia,
-  CardTextContainer,
   CardTitle,
   CardSubtitle,
   CardPrimaryText,
   CardSecondaryText,
 } from "../Card/Card"
 
+import { CardTextContainer } from "../Card/Card.styles"
+
 export const Project = ({
   titleLink,
   title,
   mediaType,
   mediaSrc,
+  mediaHeight,
   link,
   description,
   collab,
@@ -25,7 +27,7 @@ export const Project = ({
   return (
     <CardContainer>
       <CardTitle linkTo={titleLink} text={title} />
-      <CardMedia type={mediaType} src={mediaSrc} link={link} />
+      <CardMedia type={mediaType} src={mediaSrc} link={link} height={mediaHeight}/>
       <CardTextContainer>
         <CardSubtitle
           text={description}

@@ -7,10 +7,8 @@ import { media } from "../../styles"
 
 const ani = keyframes`${fadeInDown}`
 
-export const AboutContainer = styled(Col)`
-  ${media.medium`
-		margin-top: 72px;
-	`};
+export const AboutContainer = styled.div`
+
 `
 
 export const RedTitle = styled.div`

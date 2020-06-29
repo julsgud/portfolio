@@ -7,8 +7,7 @@ import { media } from "../../styles"
 
 const ani = keyframes`${fadeInLeft}`
 
-export const AvatarNavContainer = styled(Col)`
-  margin-top: 72px;
+export const AvatarContainer = styled.div`  
   animation: 1.5s ${ani};
 `
 

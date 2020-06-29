@@ -1,14 +1,39 @@
 {
 	"projects": [
 		{
+			"title": "Buffr",
+			"description": "Productivity Tool",
+			"collab": "",
+			"collabLink": "",
+			"tools": "Typescript React, Serverless, GraphQL, Apollo, MongoDB",
+			"technicalTwist": "Productivity tool for tracking and reviewing project work times",
+			"mediaType": "image",
+			"mediaHeight": 323,
+			"mediaSrc": [
+				"https://res.cloudinary.com/julsgc/image/upload/v1593387616/Screen_Shot_2020-06-27_at_20.02.32_ijjube.png",
+				"https://res.cloudinary.com/julsgc/image/upload/v1593387616/Screen_Shot_2020-06-27_at_20.03.30_cbtpcb.png",
+				"https://res.cloudinary.com/julsgc/image/upload/v1593387616/Screen_Shot_2020-06-27_at_20.03.23_sz52v9.png",
+				"https://res.cloudinary.com/julsgc/image/upload/v1593387616/Screen_Shot_2020-06-27_at_20.02.58_fxsclk.png"
+			],
+			"link": "https://julsgud.github.io/tpr-vonvon"
+		},
+		{
 			"title": "plasticsrev.club",
-			"description": "Canvas Image Processing",
+			"description": "Promotional Website",
 			"collab": "",
 			"collabLink": "",
 			"tools": "Canvas, React, Cloudinary, Kairos and Facebook APIs",
 			"technicalTwist": "Canvas-based image processing using facial recognition data from user's facebook profile image.",
 			"mediaType": "image",
-			"mediaSrc": "https://res.cloudinary.com/julsgc/image/upload/v1494274636/banner_title.png",
+			"mediaHeight": 252,
+			"mediaSrc": [
+				"https://res.cloudinary.com/julsgc/image/upload/v1499737869/xydfva1ndwhjyb3mywd8.png",
+				"https://res.cloudinary.com/julsgc/image/upload/v1499662376/eg53nzzerl6uunquzsz2.png",
+				"https://res.cloudinary.com/julsgc/image/upload/v1499691745/qvwkqntd6eqw46aoixsf.png",
+				"https://res.cloudinary.com/julsgc/image/upload/v1499695460/wopfvhxlzp3fey1eowbk.png",
+				"https://res.cloudinary.com/julsgc/image/upload/v1499761087/dmm3vollmbozrae6sx5y.png",
+				"https://res.cloudinary.com/julsgc/image/upload/v1499741739/iaijhd87s6ztfm3p2o11.png"
+			],
 			"link": "https://julsgud.github.io/tpr-vonvon"
 		},
 		{
@@ -17,7 +42,7 @@
 			"collab": "",
 			"collabLink": "",
 			"tools": "P5.js, Canvas, Web Audio API",
-			"technicalTwist": "Image and sound interaction into game pattern",
+			"technicalTwist": "Interactive puzzle and sequencer",
 			"mediaType": "image",
 			"mediaSrc": "https://res.cloudinary.com/julsgc/image/upload/v1501209473/icanchase.png",
 			"link": "https://icanchase.github.io"

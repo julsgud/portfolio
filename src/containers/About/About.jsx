@@ -9,25 +9,23 @@ import {
 } from "./About.styles"
 
 const Bio = `
-  I'm a developer from 🇲🇽 MX City. I'm all about building digital tools, multimedia art and experiences. 
+  I'm a developer from 🇲🇽 MX City. I'm all about solving problems with the most simple yet elegant solution. 
   When I'm not working with the awesome product team @ SalesLoft, I'm probably making sounds with 
-  synths and guitars, tinkering with some new tech (serverless recently 🖤) or cooking something from scratch. 
+  synths and guitars, cooking something from scratch or tinkering with some new tech (Serverless & WebGL recently 🖤). 
 `
 
 export const About = () => {
   return (
-    <Row>
-      <AboutContainer>
-        <Col xs={12}>
-          <RedTitle> Hey! </RedTitle>
-        </Col>
-        <Col xs={12}>
-          <Description>{Bio}</Description>
-          <Description>
-            <StyledLink to="work"> Check out my work! </StyledLink>
-          </Description>
-        </Col>
-      </AboutContainer>
-    </Row>
+    <AboutContainer>
+      <Col xs={12}>
+        <RedTitle> Hey! </RedTitle>
+      </Col>
+      <Col xs={12}>
+        <Description>{Bio}</Description>
+        <Description>
+          <StyledLink to="work"> Check out my work! </StyledLink>
+        </Description>
+      </Col>
+    </AboutContainer>
   )
 }

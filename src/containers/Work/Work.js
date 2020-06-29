@@ -1,38 +1,14 @@
-import React, { useRef } from "react"
-import { Row } from "react-flexbox-grid"
-import { ViewPager, Frame, Track, View } from "react-view-pager"
+import React, { useState, useCallback } from "react"
+import styled from "styled-components"
+import { useTransition, animated } from "react-spring"
 
 import { Project } from "../../components/Project/Project"
-import {WorkContainer, Arrow, Icon} from "./Work.styles"
+import { WorkContainer } from "./Work.styles"
 import json from "./projects.json"
 
-export const Work = () => {
-  const track = useRef(null)
-  const projects = json.projects.map((p, i) => (
-    <View key={i}>
-      <Project {...p} />
-    </View>
-  ))
 
-  return (
-    <Row center="xs">
-      <WorkContainer xs={12}>
-        <ViewPager>
-          <Frame>
-            <Track ref={track} viewsToShow={1} infinite>
-              {projects}
-            </Track>
-          </Frame>
-          <nav className="pager-controls">
-            <Arrow onClick={() => track.current.prev()}>
-              <Icon className="fa fa-long-arrow-left" aria-hidden="true" />
-            </Arrow>
-            <Arrow onClick={() => track.current.next()}>
-              <Icon className="fa fa-long-arrow-right" aria-hidden="true" />
-            </Arrow>
-          </nav>
-        </ViewPager>
-      </WorkContainer>
-    </Row>
-  )
+export const Work = () => {
+  const projects = json.projects.map((p) => <Project {...p} />)
+
+  return <WorkContainer>{projects}</WorkContainer>
 }
